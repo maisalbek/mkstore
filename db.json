@@ -1,0 +1,800 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "image": [
+        "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "осень",
+      "type": "novinka"
+    },
+    {
+      "id": 3,
+      "image": [
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "зима",
+      "type": "novinka"
+    },
+    {
+      "id": 4,
+      "image": [
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для выезда на природу",
+      "type": "novinka"
+    },
+    {
+      "id": 5,
+      "image": [
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://images.wbstatic.net/big/new/24570000/24578498-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 25,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Платья",
+      "type": "hit"
+    },
+    {
+      "id": 1,
+      "image": [
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 25,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "лето",
+      "type": "novinka"
+    },
+    {
+      "id": 6,
+      "image": [
+        "https://images.wbstatic.net/big/new/40170000/40170987-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "юбки",
+      "type": "hit"
+    },
+    {
+      "id": 7,
+      "image": [
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для дома",
+      "type": "novinka"
+    },
+    {
+      "id": 8,
+      "image": [
+        "https://images.wbstatic.net/big/new/31890000/31891216-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для походов",
+      "type": "hit"
+    },
+    {
+      "id": 9,
+      "image": [
+        "https://autogear.ru/misc/i/gallery/44565/2374333.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 25,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "весна",
+      "type": "novinka"
+    },
+    {
+      "id": 10,
+      "image": [
+        "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Тонкие",
+      "type": "hit"
+    },
+    {
+      "id": 11,
+      "image": [
+        "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Легкие",
+      "type": "novinka"
+    }
+  ],
+  "footer": {
+    "id": 1,
+    "footerLogo": "https://postimg.cc/75k01FrM",
+    "footerText": "Developed by Zeon 2022",
+    "footerTel1": "+996505001199",
+    "footerTel2": "+996500001122",
+    "mail": "mail@gmail.com",
+    "instagram": "https://www.instagram.com/",
+    "telegram": "https://web.telegram.org/z/",
+    "whatsApp": "https://www.whatsapp.com/?lang=ru"
+  },
+  "header": {
+    "id": 1,
+    "headerLogo": "https://ibb.co/Lr2MQxk",
+    "headerTel": "+996701010101",
+    "telegram": "https://web.telegram.org/z/",
+    "whatsApp": "https://www.whatsapp.com/?lang=ru"
+  },
+  "slider": {
+    "products": [
+      {
+        "id": 1,
+        "text1": "Lorem",
+        "text2": "ipsum",
+        "text3": "lorem lorem",
+        "text4": "ipsum ipsum",
+        "img": "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "discount": 25
+      },
+      {
+        "id": 2,
+        "text1": "Lorem",
+        "text2": "ipsum",
+        "text3": "lorem lorem",
+        "text4": "ipsum ipsum",
+        "img": "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "discount": 30
+      },
+      {
+        "id": 3,
+        "text1": "Lorem",
+        "text2": "ipsum",
+        "text3": "lorem lorem",
+        "text4": "ipsum ipsum",
+        "img": "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "discount": 50
+      }
+    ]
+  },
+  "advantages": [
+    {
+      "id": 1,
+      "title": "Удобные способы оплаты",
+      "text": "Мы предлагаем возможность безналичной оплаты"
+    },
+    {
+      "id": 2,
+      "title": "Cвоевремнная доставка",
+      "text": "100% гарантия возврата товара - 14 дней на возврат, без скандалов и истерик."
+    },
+    {
+      "id": 3,
+      "title": "Профессиональная консультация",
+      "text": "Мы проконсультируем и индивидуально подойдем к Вашему заказу"
+    },
+    {
+      "id": 4,
+      "title": "Акции и бонусы для покупателей",
+      "text": "Промокоды со скидками для постоянных клиентов, акции на новые позиции"
+    }
+  ],
+  "collection": [
+    {
+      "id": 2,
+      "collection": "осень",
+      "image": [
+        "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "type": "novinka"
+    },
+    {
+      "id": 3,
+      "image": [
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "зима",
+      "type": "novinka"
+    },
+    {
+      "id": 4,
+      "image": [
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для выезда на природу",
+      "type": "novinka"
+    },
+    {
+      "id": 5,
+      "image": [
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://images.wbstatic.net/big/new/24570000/24578498-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 25,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Платья",
+      "type": "hit"
+    },
+    {
+      "id": 1,
+      "image": [
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 25,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "лето",
+      "type": "novinka"
+    },
+    {
+      "id": 6,
+      "image": [
+        "https://images.wbstatic.net/big/new/40170000/40170987-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "юбки",
+      "type": "hit"
+    },
+    {
+      "id": 7,
+      "image": [
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для дома",
+      "type": "novinka"
+    },
+    {
+      "id": 8,
+      "image": [
+        "https://images.wbstatic.net/big/new/31890000/31891216-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для походов",
+      "type": "hit"
+    },
+    {
+      "id": 9,
+      "image": [
+        "https://autogear.ru/misc/i/gallery/44565/2374333.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 25,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "весна",
+      "type": "novinka"
+    },
+    {
+      "id": 10,
+      "image": [
+        "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Тонкие",
+      "type": "hit"
+    },
+    {
+      "id": 11,
+      "image": [
+        "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Легкие",
+      "type": "novinka"
+    },
+    {
+      "id": 12,
+      "collection": "осень",
+      "image": [
+        "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "type": "novinka"
+    },
+    {
+      "id": 13,
+      "image": [
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "зима",
+      "type": "novinka"
+    },
+    {
+      "id": 14,
+      "image": [
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
+        "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 2730,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для дома",
+      "type": "novinka"
+    },
+    {
+      "id": 15,
+      "image": [
+        "https://images.wbstatic.net/big/new/31890000/31891216-1.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 0,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "Для походов",
+      "type": "hit"
+    },
+    {
+      "id": 16,
+      "image": [
+        "https://autogear.ru/misc/i/gallery/44565/2374333.jpg",
+        "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
+        "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
+        "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
+      ],
+      "title": "Вечернее платье",
+      "price": 1365,
+      "oldprice": 0,
+      "discount": 25,
+      "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
+      "material": "Полиэстер ",
+      "textile": "волокна",
+      "collection": "весна",
+      "type": "novinka"
+    }
+  ],
+  "about": {
+    "img1": "https://images.unsplash.com/photo-1616249899793-4b6a9532aa9c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000",
+    "img2": "https://images.unsplash.com/photo-1623421536409-90ecd3bb8c4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHw%3D&w=1000&q=80",
+    "img3": "https://images.unsplash.com/photo-1635865421288-0e01b4755f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80",
+    "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой."
+  },
+  "news": [
+    {
+      "id": 1,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/9a70ff109854731.60dec6c8d81dd.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 2,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 3,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/94023c109854731.60dec6c8d8a02.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 4,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8b36c6109854731.60dec6c8d7428.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 5,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/397aac109854731.60dec6c8dc461.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 6,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/08e6cf109854731.60dec6c8d6fc4.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 7,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 8,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba9408109854731.60dec6c8d4c61.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 9,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/9a70ff109854731.60dec6c8d81dd.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 10,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 11,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/94023c109854731.60dec6c8d8a02.jpg",
+      "headerText": "Lorem ipsum dsolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 12,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8b36c6109854731.60dec6c8d7428.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 13,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/397aac109854731.60dec6c8dc461.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 14,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/08e6cf109854731.60dec6c8d6fc4.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 15,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 16,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba9408109854731.60dec6c8d4c61.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 17,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/9a70ff109854731.60dec6c8d81dd.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 18,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 19,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/94023c109854731.60dec6c8d8a02.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 20,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8b36c6109854731.60dec6c8d7428.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 21,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/397aac109854731.60dec6c8dc461.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 22,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/08e6cf109854731.60dec6c8d6fc4.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 23,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 24,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba9408109854731.60dec6c8d4c61.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 25,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/9a70ff109854731.60dec6c8d81dd.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 26,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 27,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/94023c109854731.60dec6c8d8a02.jpg",
+      "headerText": "Lorem ipsum dsolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 28,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8b36c6109854731.60dec6c8d7428.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 29,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/397aac109854731.60dec6c8dc461.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 30,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/08e6cf109854731.60dec6c8d6fc4.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 31,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/668429109854731.60dec6c8d9cf1.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    },
+    {
+      "id": 32,
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba9408109854731.60dec6c8d4c61.jpg",
+      "headerText": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis "
+    }
+  ],
+  "help": [
+    {
+      "id": 1,
+      "question": "Как я могу заказать одежду?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
+    },
+    {
+      "id": 2,
+      "question": "Как осуществляется доставка?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
+    },
+    {
+      "id": 3,
+      "question": "Где производятся вещи?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
+    },
+    {
+      "id": 4,
+      "question": "Как будет упакован заказ?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
+    },
+    {
+      "id": 5,
+      "question": "Lorem ipsum dolor sit amet?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
+    },
+    {
+      "id": 6,
+      "question": "Есть ли возврат, при условии если одежда пришла не того размера?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
+    },
+    {
+      "id": 7,
+      "question": "Как я могу оставить заявку на обратную связь",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
+    }
+  ]
+}

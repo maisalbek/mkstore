@@ -1,0 +1,9 @@
+export const API = "http://localhost:8001/products";
+export const API1 = "http://localhost:8001/footer"; //footer
+export const API2 = "http://localhost:8001/header"; //header
+export const API3 = "http://localhost:8001/slider"; //slider
+export const API4 = "http://localhost:8001/advantages"; //advantages
+export const API5 = "http://localhost:8001/collection"; //collection
+export const API6 = "http://localhost:8001/about"; //about
+export const API7 = "http://localhost:8001/news"; //news
+export const API8 = "http://localhost:8001/help"; //help
