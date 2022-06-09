@@ -55,7 +55,7 @@ const FloatMenu = () => {
                 behavior: "smooth",
               });
             }}
-            style={{ width: "25px", marginBottom: "30px" }}
+            style={{ width: "25px", marginBottom: "30px", cursor: "pointer" }}
             src={ArrowUp}
             alt=""
           />
@@ -67,6 +67,7 @@ const FloatMenu = () => {
               width="25px"
               src={CloseIcon}
               alt=""
+              style={{ cursor: "pointer" }}
             />
           ) : (
             <img
@@ -76,6 +77,7 @@ const FloatMenu = () => {
               width="25px"
               src={ChatIcon}
               alt=""
+              style={{ cursor: "pointer" }}
             />
           )}
         </div>
@@ -98,7 +100,7 @@ const FloatMenu = () => {
           </a>
           <img
             onClick={handleClickOpen}
-            style={{ width: "44px", margin: "6px" }}
+            style={{ width: "44px", margin: "6px", cursor: "pointer" }}
             src={Telephone}
             alt=""
           />

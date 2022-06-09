@@ -17,14 +17,8 @@ const useStyles = makeStyles(() => ({
 
 const MyDialog = ({ open, handleClose }) => {
   const [inpValues, setInpValues] = useState({ title: "", phone: "" });
-  const [openSend, setOpenSend] = useState(false);
-  const [dialogSize, setDialogSize] = useState(false);
+  const [secondPart, setSecondPart] = useState(false);
   const classes = useStyles();
-
-  useEffect(() => {
-    setOpenSend(false);
-    setDialogSize(false);
-  }, []);
 
   const handleChange = (e) => {
     let obj = {
@@ -39,22 +33,22 @@ const MyDialog = ({ open, handleClose }) => {
     if (obj.title == "" || obj.phone == "") {
       alert("Пожалуйста заполните поля!");
     } else if (regex.test(obj.phone)) {
-      setOpenSend(true);
+      setSecondPart(true);
+      setInpValues({ title: "", phone: "" });
     } else {
       alert("Неверный номер!");
     }
-    setInpValues({ title: "", phone: "" });
   };
   return (
     <Dialog
-      classes={dialogSize ? { paper: classes.paper } : null}
+      classes={secondPart ? { paper: classes.paper } : null}
       open={open}
       TransitionComponent={Transition}
       keepMounted
       onClose={handleClose}
       aria-describedby="alert-dialog-slide-description"
     >
-      {openSend ? (
+      {secondPart ? (
         <div className="float-menu-container">
           <img id="sendImage" width="70px" src={send} alt="" />
           <span className="float-send-headerText">Спасибо!</span>
@@ -63,11 +57,14 @@ const MyDialog = ({ open, handleClose }) => {
           </span>
           <button
             className="zakazat-btn"
-            style={{ backgroundColor: "#1D1D1B", marginTop: "16px" }}
+            style={{
+              backgroundColor: "#1D1D1B",
+              marginTop: "16px",
+              cursor: "pointer",
+            }}
             onClick={() => {
               handleClose();
-              setOpenSend(false);
-              setDialogSize(false);
+              setSecondPart(false);
             }}
           >
             Продолжить покупки
@@ -76,7 +73,12 @@ const MyDialog = ({ open, handleClose }) => {
       ) : (
         <div className="float-menu-container">
           <img
-            style={{ position: "absolute", left: "92%", top: "5%" }}
+            style={{
+              position: "absolute",
+              left: "92%",
+              top: "5%",
+              cursor: "pointer",
+            }}
             src={CloseIcon}
             onClick={handleClose}
             alt=""
@@ -121,12 +123,11 @@ const MyDialog = ({ open, handleClose }) => {
             className="zakazat-btn"
             style={
               inpValues.phone !== ""
-                ? { backgroundColor: "#1D1D1B" }
+                ? { backgroundColor: "#1D1D1B", cursor: "pointer" }
                 : { backgroundColor: "rgb(121, 118, 118)" }
             }
             onClick={() => {
               handleSubmit(inpValues);
-              setDialogSize(true);
             }}
           >
             Заказать звонок

@@ -32,7 +32,7 @@ input[type="search"] {
   padding: 7px 8px;
   font-size: 16px;
   color: black;
-  border: 1px solid transparent;
+  border: none;
   border-radius: inherit;
   font-family: "Montserrat", sans-serif;
 }

@@ -167,9 +167,10 @@ html {
   margin: 0 0 20px 50px !important;
 }
 .salenumber {
-  transform: rotate(95deg);
+  transform: rotate(90deg);
   font-size: 95px;
   margin: 30px 0 40px -5px;
+  font-weight: 500;
 }
 @media all and (max-width: 816px) {
   .salenumber {
@@ -258,7 +259,7 @@ html {
 }
 .MuiPaper-root {
   box-shadow: none !important;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #e0e0e0;
 }
 .product-container {
   width: "100%";
@@ -296,12 +297,24 @@ html {
 .font-price {
   font-weight: 500;
   font-size: 16px;
+  margin-top: 6px;
+}
+.fp {
+  font-weight: 500;
+  font-size: 16px;
 }
 .font-size {
   font-weight: 400;
   font-size: 13px;
   color: #7c7c7c;
+  margin-top: 6px;
 }
+.fs {
+  font-weight: 400;
+  font-size: 13px;
+  color: #7c7c7c;
+}
+
 .card-image-container {
   width: 320px;
   height: 437px;
@@ -310,8 +323,9 @@ html {
 .likeIcon {
   position: absolute;
   top: 2%;
-  left: 90%;
+  left: 89%;
   color: white;
+  cursor: pointer;
 }
 .arrow-right {
   position: absolute;
@@ -335,6 +349,11 @@ html {
   font-size: 13px;
   font-weight: 500;
   border-width: 1px;
+}
+@media all and (max-width: 899px) {
+  .btn-more {
+    display: none;
+  }
 }
 .btn-more:hover {
   color: black;
@@ -521,6 +540,7 @@ html {
   color: #ffffff;
   font-size: 14px;
   margin: 0;
+  cursor: pointer;
 }
 .collection-btn:hover {
   background-color: #ffffff;
@@ -529,6 +549,7 @@ html {
 }
 .card-image {
   filter: brightness(80%);
+  cursor: pointer;
 }
 /* ********************************  adventages ********************************** */
 .adventages {
@@ -640,7 +661,6 @@ html {
 @media all and (max-width: 408px) {
   .float-menu-headerText {
     font-size: 14px;
-    margin-top: 6px;
   }
   .float-menu-text {
     font-size: 12px;
@@ -691,4 +711,7 @@ html {
   .MuiDialog-paperScrollPaper {
     height: 270px !important;
   }
+}
+.imgcursor {
+  cursor: pointer;
 }

@@ -8,16 +8,25 @@ import Logo from "../images/Logo.svg";
 import SearchIcon from "../images/searchIcon.svg";
 import BurgerMenu from "../images/coolicon.svg";
 import FavoriteIcon from "../images/FavoriteIcon.svg";
+import FavoriteIconbadge from "../images/FavoriteIconDot.svg";
 import ShoppingBag from "../images/shopping-bag 1.svg";
+import ShoppingBagbad from "../images/shopping-bagDot.svg";
 import FloatMenu from "../subcomponents/FloatMenu";
 import { API2 } from "../constants/Constants";
 import axios from "axios";
 
 import "./Navbar.css";
 import MyDrawer from "../subcomponents/MyDrawer";
+import { useFavorite } from "../context/FavoriteContextProvider";
+import { useCart } from "../context/CartContextProvider";
 
 export default function Navbar() {
   const [headerInfo, setHeaderInfo] = React.useState({});
+  const { fav, getFav } = useFavorite();
+  const { cart, getCart } = useCart();
+  const [inFav, setInFav] = React.useState();
+  const [inCart, setInCart] = React.useState();
+
   const [state, setState] = React.useState({
     left: false,
   });
@@ -36,7 +45,18 @@ export default function Navbar() {
     axios.get(API2).then((response) => {
       setHeaderInfo(response.data);
     });
+    getFav();
+    getCart();
   }, []);
+
+  React.useEffect(() => {
+    fav.products && fav.products.length > 0 ? setInFav(true) : setInFav(false);
+  }, [fav.products]);
+  React.useEffect(() => {
+    cart.products && cart.products.length > 0
+      ? setInCart(true)
+      : setInCart(false);
+  }, [cart.products]);
 
   return (
     <Box
@@ -169,12 +189,21 @@ export default function Navbar() {
                 marginLeft: "35px",
               }}
             >
-              <img
-                width="23px"
-                src={FavoriteIcon}
-                alt=""
-                style={{ marginRight: "10px" }}
-              />
+              {inFav ? (
+                <img
+                  width="23px"
+                  src={FavoriteIconbadge}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              ) : (
+                <img
+                  width="23px"
+                  src={FavoriteIcon}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              )}
               Избранное
             </span>
           </Link>
@@ -193,12 +222,21 @@ export default function Navbar() {
                 borderLeft: "1px solid #e0e0e0",
               }}
             >
-              <img
-                width="23px"
-                src={ShoppingBag}
-                alt=""
-                style={{ marginRight: "10px" }}
-              />
+              {inCart ? (
+                <img
+                  width="23px"
+                  src={ShoppingBagbad}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              ) : (
+                <img
+                  width="23px"
+                  src={ShoppingBag}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              )}
               Корзина
             </span>
           </Link>

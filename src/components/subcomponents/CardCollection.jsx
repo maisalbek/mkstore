@@ -1,8 +1,12 @@
 import React from "react";
 import Card from "@mui/material/Card";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useNavigate } from "react-router-dom";
+import { useProductContext } from "../context/ProductContextProvider";
 
 const CardCollection = ({ item }) => {
+  const navigate = useNavigate();
+  const { idForEdit } = useProductContext();
   return (
     <div style={{ width: "320px", display: "flex", justifyContent: "center" }}>
       <Card
@@ -11,6 +15,8 @@ const CardCollection = ({ item }) => {
           maxWidth: 320,
           height: 374,
           padding: "0",
+          border: "none",
+          borderRadius: "0",
         }}
       >
         <div style={{ height: "330px", position: "relative" }}>
@@ -20,6 +26,10 @@ const CardCollection = ({ item }) => {
             height="100%"
             src={item.image[0]}
             alt=""
+            onClick={() => {
+              idForEdit(item.collection);
+              navigate("/allcollection");
+            }}
           />
           <div
             style={{
@@ -36,7 +46,14 @@ const CardCollection = ({ item }) => {
           </div>
         </div>
 
-        <button style={{ border: "none" }} className="collection-btn">
+        <button
+          style={{ border: "none" }}
+          className="collection-btn"
+          onClick={() => {
+            idForEdit(item.collection);
+            navigate("/allcollection");
+          }}
+        >
           Смотреть все
           <ArrowForwardIosIcon sx={{ marginLeft: "10px" }} />
         </button>

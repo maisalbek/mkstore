@@ -1,38 +1,93 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiPaper-rounded {
+  border-radius: 0 !important;
+  border: none !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.cardparent {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+}
+@media all and (max-width: 340px) {
+  .imageon320 {
+    width: 295px !important;
+  }
+  .cardparent {
+    width: 295px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #ececec;
+}
+.public-container {
+  margin: 0 99px;
+  padding: 16px;
+  text-align: start;
+  background-color: #ffffff;
+}
+.public1 {
+  padding: 11px 99px 18px 99px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+.public2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #393939;
 }
-
-.App-link {
-  color: #61dafb;
+@media all and (max-width: 899px) {
+  .public-container {
+    margin: 0 16px;
+  }
+  .public1 {
+    padding: 11px 16px 18px 16px;
+  }
+  .public2 {
+    font-size: 18px;
+  }
+  .publicOuter {
+    padding: 0 16px !important;
+  }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#colordots {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  opacity: 0.47;
+}
+.colordots {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  opacity: 0.47;
+}
+#colordots:hover,
+#colordots:focus {
+  outline: 4px solid #ccc;
+  background-color: #999;
+}
+.dotsactive {
+  outline: 4px solid #ccc;
+  background-color: #999;
+}
+input {
+  outline: none;
 }

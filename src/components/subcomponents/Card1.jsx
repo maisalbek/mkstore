@@ -1,33 +1,72 @@
-import React, { useState } from "react";
-import q1 from "../images/Rectangle 338.svg";
-import q2 from "../images/Rectangle 340.svg";
-import q3 from "../images/Rectangle 341.svg";
-import q4 from "../images/Rectangle 364.svg";
-import q5 from "../images/Rectangle 366.svg";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import React, { useEffect, useState } from "react";
+import emptyheart from "../images/emptyhearticon.svg";
+import heart from "../images/hearticon.svg";
+
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import { useNavigate } from "react-router-dom";
+import { useFavorite } from "../context/FavoriteContextProvider";
 
-const Card1 = ({ item, idForEdit }) => {
+const Card1 = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
+  const { addDelToFav, isProdInFav, getFav } = useFavorite();
+  const [inFav, setInFav] = React.useState(isProdInFav(item.id));
+  const [isActive, setIsActive] = useState({});
+
+  const navigate = useNavigate();
+
+  const handleItemClick = (index) => {
+    setIsActive({ activeItem: index });
+  };
+
+  useEffect(() => {
+    getFav();
+  }, []);
   return (
-    <div style={{ width: "320px", display: "flex", justifyContent: "center" }}>
+    <div className="cardparent">
       <Card
         key={item.id}
         sx={{
           maxWidth: 320,
           height: 536,
           padding: "0",
+          border: "none",
+          borderRadius: "0",
         }}
       >
-        <div className="card-image-container">
+        <div className="card-image-container imageon320">
           <img
+            className="imageon320 imgcursor"
             width="320px"
             height="437px"
             src={item.image[currentPhoto]}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
             alt=""
           />
-          <FavoriteBorderIcon className="likeIcon" />
+          {inFav ? (
+            <img
+              src={heart}
+              alt=""
+              className="likeIcon"
+              onClick={() => {
+                addDelToFav(item);
+                setInFav(isProdInFav(item.id));
+              }}
+            />
+          ) : (
+            <img
+              src={emptyheart}
+              alt=""
+              className="likeIcon"
+              onClick={() => {
+                addDelToFav(item);
+                setInFav(isProdInFav(item.id));
+              }}
+            />
+          )}
+
           {/* <div
             className="hover-image hover1"
             onMouseEnter={() => setCurrentPhoto(0)}
@@ -56,10 +95,10 @@ const Card1 = ({ item, idForEdit }) => {
           >
             <div className="hover-line line4"></div>
           </div> */}
-          {item.discount > 0 ? (
+          {item.oldprice > 0 ? (
             <div className="arrow-right">
               <span style={{ paddingTop: "20px", color: "#ffffff" }}>
-                {`${item.discount}%`}
+                {`${item.oldprice && (item.price * 100) / item.oldprice}%`}
               </span>
             </div>
           ) : null}
@@ -92,46 +131,33 @@ const Card1 = ({ item, idForEdit }) => {
               </span>
             </span>
             <span className="font-size">Размер: 42-50</span>
-            <div>
-              <img
-                onClick={() => {
-                  idForEdit(item.id);
-                }}
-                src={q1}
-                alt=""
-                style={{ marginRight: "12px" }}
-              />
-              <img
-                onClick={() => {
-                  idForEdit(item.id);
-                }}
-                src={q2}
-                alt=""
-                style={{ marginRight: "12px" }}
-              />
-              <img
-                onClick={() => {
-                  idForEdit(item.id);
-                }}
-                src={q3}
-                alt=""
-                style={{ marginRight: "12px" }}
-              />
-              <img
-                onClick={() => {
-                  idForEdit(item.id);
-                }}
-                src={q4}
-                alt=""
-                style={{ marginRight: "12px" }}
-              />
-              <img
-                onClick={() => {
-                  idForEdit(item.id);
-                }}
-                src={q5}
-                alt=""
-              />
+            <div style={{ display: "flex", marginTop: "10px" }}>
+              {item.colors && item.colors.length > 0
+                ? item.colors.map((item1, index) => (
+                    <div
+                      key={index}
+                      style={{
+                        backgroundColor: `${item1}`,
+                        marginRight: "15px",
+                        marginLeft: "0",
+                      }}
+                      className={
+                        isActive.activeItem === index ? "dotsactive" : ""
+                      }
+                      onClick={() => {
+                        handleItemClick(index);
+                        setCurrentPhoto((prev) => {
+                          if (prev === 4) {
+                            return prev - 1;
+                          } else {
+                            return prev + 1;
+                          }
+                        });
+                      }}
+                      id="colordots"
+                    ></div>
+                  ))
+                : null}
             </div>
           </div>
         </CardContent>

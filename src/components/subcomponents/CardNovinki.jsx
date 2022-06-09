@@ -1,70 +1,60 @@
 import React, { useEffect, useState } from "react";
-import emptyheart from "../images/emptyhearticon.svg";
-import heart from "../images/hearticon.svg";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import emptyheart from "../images/emptyhearticon.svg";
+import heart from "../images/hearticon.svg";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import { useNavigate } from "react-router-dom";
 
-const CardTable = ({ item }) => {
+const CardNovinki = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const { addDelToFav, isProdInFav, getFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
   const [isActive, setIsActive] = useState({});
+  const navigate = useNavigate();
+
   const handleItemClick = (index) => {
     setIsActive({ activeItem: index });
   };
-  const navigate = useNavigate();
 
   useEffect(() => {
     getFav();
   }, []);
   return (
-    <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+    <div
+      style={{
+        width: "250px",
+        display: "flex",
+        justifyContent: "center",
+        border: "none",
+      }}
+    >
       <Card
+        key={item.id}
         sx={{
-          maxWidth: 262,
-          height: 472,
+          maxWidth: 250,
+          height: 420,
           padding: "0",
           border: "none",
           borderRadius: "0",
         }}
       >
-        <div className="cardTable-image-container">
+        <div className="collectioncard-image-container">
           <img
-            width="262px"
-            height="373px"
+            width="250px"
+            height="332px"
             src={item.image[currentPhoto]}
+            alt=""
+            style={{ cursor: "pointer" }}
             onClick={() => {
               navigate(`/detail/${item.id}`);
             }}
-            alt=""
           />
-          {/* <Swiper className="mySwiper">
-            <SwiperSlide style={{ position: "relative" }}>
-              <img width="262px" height="373px" src={item.image[0]} alt="" />
-              <div className="thover-line tline1"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img width="262px" height="373px" src={item.image[1]} alt="" />
-              <div className="thover-line tline2"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img width="262px" height="373px" src={item.image[2]} alt="" />
-              <div className="thover-line tline3"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img width="262px" height="373px" src={item.image[3]} alt="" />
-              <div className="thover-line tline4"></div>
-            </SwiperSlide>
-          </Swiper> */}
           {inFav ? (
             <img
               src={heart}
               alt=""
-              className="likeIcon"
+              className="collectionlikeIcon"
               onClick={() => {
                 addDelToFav(item);
                 setInFav(isProdInFav(item.id));
@@ -74,16 +64,50 @@ const CardTable = ({ item }) => {
             <img
               src={emptyheart}
               alt=""
-              className="likeIcon"
+              className="collectionlikeIcon"
               onClick={() => {
                 addDelToFav(item);
                 setInFav(isProdInFav(item.id));
               }}
             />
           )}
+          {/* <div
+            className="hover-image hover1"
+            onMouseEnter={() => setCurrentPhoto(0)}
+            onMouseLeave={() => setCurrentPhoto(0)}
+          >
+            <div className="hover-line line1"></div>
+          </div>
+          <div
+            className="hover-image hover2"
+            onMouseEnter={() => setCurrentPhoto(1)}
+            onMouseLeave={() => setCurrentPhoto(0)}
+          >
+            <div className="hover-line line2"></div>
+          </div>
+          <div
+            className="hover-image hover3"
+            onMouseEnter={() => setCurrentPhoto(2)}
+            onMouseLeave={() => setCurrentPhoto(0)}
+          >
+            <div className="hover-line line3"></div>
+          </div>
+          <div
+            className="hover-image hover4"
+            onMouseEnter={() => setCurrentPhoto(3)}
+            onMouseLeave={() => setCurrentPhoto(0)}
+          >
+            <div className="hover-line line4"></div>
+          </div> */}
           {item.discount > 0 ? (
-            <div className="arrow-right">
-              <span style={{ paddingTop: "20px", color: "#ffffff" }}>
+            <div className="collectionarrow-right">
+              <span
+                style={{
+                  paddingTop: "25px",
+                  paddingLeft: "5px",
+                  color: "#ffffff",
+                }}
+              >
                 {`${item.oldprice && (item.price * 100) / item.oldprice}%`}
               </span>
             </div>
@@ -99,31 +123,26 @@ const CardTable = ({ item }) => {
               backgroundColor: "#ffffff",
             }}
           >
-            <span className="font-title">{item.title}</span>
-            <span className="fp">
-              {item.price} <span className="fp">р</span>
+            <span className="collectionfont">
               <span
                 style={{
-                  marginLeft: "5px",
                   color: "#7c7c7c",
                   textDecoration: "line-through",
                   fontWeight: "300",
+                  marginRight: "7px",
                 }}
               >
-                {item.oldprice > 0 ? item.oldprice : null}
-                <span style={{ fontWeight: "300" }}>
-                  {item.oldprice > 0 ? "р" : null}
-                </span>
+                {item.oldprice} <span className="collectionfont">р</span>
+              </span>
+              {item.price}
+              <span style={{ marginLeft: "5px" }} className="collectionfont">
+                р
               </span>
             </span>
-            <span className="fs">Размер: 42-50</span>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginTop: "2px",
-              }}
-            >
+            <span className="collectionfont-title">{item.title}</span>
+
+            <span className="font-size">Размер: 42-50</span>
+            <div style={{ display: "flex", marginTop: "12px" }}>
               {item.colors && item.colors.length > 0
                 ? item.colors.map((item1, index) => (
                     <div
@@ -158,4 +177,4 @@ const CardTable = ({ item }) => {
   );
 };
 
-export default CardTable;
+export default CardNovinki;

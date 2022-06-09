@@ -1,13 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { API5 } from "../constants/Constants";
+import { API } from "../constants/Constants";
 import CardCollection from "../subcomponents/CardCollection";
 import { Pagination } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MySkeleton from "../subcomponents/MySkeleton";
 
 import "./Collection.css";
-import { Link, Navigate, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   ul: {
@@ -54,12 +54,12 @@ const CollectionPage = () => {
 
   useEffect(() => {
     if (screenWidth <= 724) {
-      axios.get(`${API5}${window.location.search}`).then((res) => {
+      axios.get(`${API}${window.location.search}`).then((res) => {
         setCollection(res.data);
         setPageTotalCount(Math.ceil(res.headers["x-total-count"] / 4));
       });
     } else {
-      axios.get(`${API5}${window.location.search}`).then((res) => {
+      axios.get(`${API}${window.location.search}`).then((res) => {
         setCollection(res.data);
         setPageTotalCount(Math.ceil(res.headers["x-total-count"] / 8));
       });

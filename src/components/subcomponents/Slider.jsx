@@ -11,7 +11,9 @@ const Slider = ({ item }) => {
           {item.text3} <br /> {item.text4}
         </span>
       </div>
-      <img className="img" src={item.img} alt="" />
+      <a href="https://www.asos.com/" target="_blank">
+        <img className="img" src={item.img} alt="" />
+      </a>
       <div className="slide-side-right">
         <div className="span-text-right">
           <span className="sale one">Sale</span>
