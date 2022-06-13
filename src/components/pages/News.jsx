@@ -71,7 +71,7 @@ const News = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#ECECEC" }}>
+    <div>
       <div className="aboutHeaderContainer">
         <span style={{ margin: "22px 0" }}>
           <Link to="/" style={{ textDecoration: "none", color: "#393939" }}>
@@ -84,7 +84,6 @@ const News = () => {
       <div
         style={{
           width: "100%",
-          backgroundColor: "#ECECEC",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

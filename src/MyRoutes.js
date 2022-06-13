@@ -11,6 +11,7 @@ import Help from "./components/pages/Help";
 import Home from "./components/pages/Home";
 import News from "./components/pages/News";
 import Public from "./components/pages/Public";
+import SearchPage from "./components/pages/SearchPage";
 
 const MyRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const MyRoutes = () => {
         <Route path="/allcollection" element={<AllCollection />} />
         <Route path="/news" element={<News />} />
         <Route path="/detail/:prodId" element={<Details />} />
+        <Route path="/search" element={<SearchPage />} />
         <Route path="/help" element={<Help />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/cart" element={<Cart />} />

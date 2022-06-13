@@ -11,6 +11,8 @@ const CardNovinki = ({ item }) => {
   const { addDelToFav, isProdInFav, getFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
   const [isActive, setIsActive] = useState({});
+  const [showLike, setShowLike] = useState(false);
+
   const navigate = useNavigate();
 
   const handleItemClick = (index) => {
@@ -28,6 +30,8 @@ const CardNovinki = ({ item }) => {
         justifyContent: "center",
         border: "none",
       }}
+      onMouseEnter={() => setShowLike(true)}
+      onMouseLeave={() => setShowLike(false)}
     >
       <Card
         key={item.id}
@@ -46,9 +50,6 @@ const CardNovinki = ({ item }) => {
             src={item.image[currentPhoto]}
             alt=""
             style={{ cursor: "pointer" }}
-            onClick={() => {
-              navigate(`/detail/${item.id}`);
-            }}
           />
           {inFav ? (
             <img
@@ -61,20 +62,25 @@ const CardNovinki = ({ item }) => {
               }}
             />
           ) : (
-            <img
-              src={emptyheart}
-              alt=""
-              className="collectionlikeIcon"
-              onClick={() => {
-                addDelToFav(item);
-                setInFav(isProdInFav(item.id));
-              }}
-            />
+            showLike && (
+              <img
+                src={emptyheart}
+                alt=""
+                className="collectionlikeIcon emptycol"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            )
           )}
-          {/* <div
+          <div
             className="hover-image hover1"
             onMouseEnter={() => setCurrentPhoto(0)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line1"></div>
           </div>
@@ -82,6 +88,9 @@ const CardNovinki = ({ item }) => {
             className="hover-image hover2"
             onMouseEnter={() => setCurrentPhoto(1)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line2"></div>
           </div>
@@ -89,6 +98,9 @@ const CardNovinki = ({ item }) => {
             className="hover-image hover3"
             onMouseEnter={() => setCurrentPhoto(2)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line3"></div>
           </div>
@@ -96,9 +108,12 @@ const CardNovinki = ({ item }) => {
             className="hover-image hover4"
             onMouseEnter={() => setCurrentPhoto(3)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line4"></div>
-          </div> */}
+          </div>
           {item.discount > 0 ? (
             <div className="collectionarrow-right">
               <span
@@ -132,9 +147,10 @@ const CardNovinki = ({ item }) => {
                   marginRight: "7px",
                 }}
               >
-                {item.oldprice} <span className="collectionfont">р</span>
+                {item.oldprice.toLocaleString().replace(",", " ")}{" "}
+                <span className="collectionfont">р</span>
               </span>
-              {item.price}
+              {item.price.toLocaleString().replace(",", " ")}
               <span style={{ marginLeft: "5px" }} className="collectionfont">
                 р
               </span>

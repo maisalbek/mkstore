@@ -17,7 +17,7 @@ const About = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div style={{ backgroundColor: "#ffffff" }}>
+    <div>
       <div className="collectionOuterContainer aboutOuterContainer">
         <span style={{ margin: "22px 0" }}>
           <Link to="/" style={{ textDecoration: "none", color: "#393939" }}>
@@ -27,7 +27,7 @@ const About = () => {
           <span style={{ fontWeight: "500", color: "#979797" }}>О нас</span>
         </span>
       </div>
-      <div style={{ backgroundColor: "#ECECEC", paddingTop: "12px" }}>
+      <div style={{ paddingTop: "12px" }}>
         <div className="aboutMobileVersion">
           <div className="abouttLeftSide">
             <div className="aboutInnerLeftSide">

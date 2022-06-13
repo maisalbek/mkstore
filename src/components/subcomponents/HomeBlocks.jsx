@@ -4,10 +4,9 @@ const HomeBlocks = ({ item, image }) => {
   return (
     <div className="blocks">
       <img className="adventage-image" width="70px" src={image} alt="" />
-      <span style={{ fontWeight: "500", lineHeight: "17px" }}>
-        {item.title}
-      </span>
+      <span className="homeblockstitle">{item.title}</span>
       <span
+        className="homeblockstext"
         style={{
           color: "#979797",
           lineHeight: "24px",

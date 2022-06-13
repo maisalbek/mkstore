@@ -11,52 +11,18 @@
   justify-content: center;
 }
 @media all and (max-width: 340px) {
-  .imageon320 {
+  /* .imageon320 {
     width: 295px !important;
-  }
+  } */
   .cardparent {
     width: 295px;
   }
 }
 body {
-  background-color: #ececec;
+  /* background-color: #ececec; */
+  background-color: #f2f2f2;
 }
-.public-container {
-  margin: 0 99px;
-  padding: 16px;
-  text-align: start;
-  background-color: #ffffff;
-}
-.public1 {
-  padding: 11px 99px 18px 99px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.public2 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  display: flex;
-  align-items: center;
-  color: #393939;
-}
-@media all and (max-width: 899px) {
-  .public-container {
-    margin: 0 16px;
-  }
-  .public1 {
-    padding: 11px 16px 18px 16px;
-  }
-  .public2 {
-    font-size: 18px;
-  }
-  .publicOuter {
-    padding: 0 16px !important;
-  }
-}
+
 #colordots {
   width: 8px;
   height: 8px;

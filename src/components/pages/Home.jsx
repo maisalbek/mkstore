@@ -158,7 +158,7 @@ const Home = () => {
         )}
       </AliceCarousel>
       <div className="hitprodaj">
-        <span className="hitprodaj-text">Хит продаж</span>
+        <span className="novinki-text">Хит продаж</span>
         <div className="product-container">
           {products && products.length > 0 ? (
             products.map((item, index) => <Card1 key={index} item={item} />)

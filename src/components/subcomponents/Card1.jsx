@@ -12,6 +12,7 @@ const Card1 = ({ item }) => {
   const { addDelToFav, isProdInFav, getFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
   const [isActive, setIsActive] = useState({});
+  const [showLike, setShowLike] = useState(false);
 
   const navigate = useNavigate();
 
@@ -23,7 +24,11 @@ const Card1 = ({ item }) => {
     getFav();
   }, []);
   return (
-    <div className="cardparent">
+    <div
+      className="cardparent"
+      onMouseEnter={() => setShowLike(true)}
+      onMouseLeave={() => setShowLike(false)}
+    >
       <Card
         key={item.id}
         sx={{
@@ -34,15 +39,12 @@ const Card1 = ({ item }) => {
           borderRadius: "0",
         }}
       >
-        <div className="card-image-container imageon320">
+        <div className="card-image-container">
           <img
-            className="imageon320 imgcursor"
+            className="imageon320"
             width="320px"
             height="437px"
             src={item.image[currentPhoto]}
-            onClick={() => {
-              navigate(`/detail/${item.id}`);
-            }}
             alt=""
           />
           {inFav ? (
@@ -55,22 +57,25 @@ const Card1 = ({ item }) => {
                 setInFav(isProdInFav(item.id));
               }}
             />
-          ) : (
+          ) : showLike ? (
             <img
               src={emptyheart}
               alt=""
-              className="likeIcon"
+              className="likeIcon emptyheart"
               onClick={() => {
                 addDelToFav(item);
                 setInFav(isProdInFav(item.id));
               }}
             />
-          )}
+          ) : null}
 
-          {/* <div
+          <div
             className="hover-image hover1"
             onMouseEnter={() => setCurrentPhoto(0)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line1"></div>
           </div>
@@ -78,6 +83,9 @@ const Card1 = ({ item }) => {
             className="hover-image hover2"
             onMouseEnter={() => setCurrentPhoto(1)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line2"></div>
           </div>
@@ -85,6 +93,9 @@ const Card1 = ({ item }) => {
             className="hover-image hover3"
             onMouseEnter={() => setCurrentPhoto(2)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line3"></div>
           </div>
@@ -92,12 +103,15 @@ const Card1 = ({ item }) => {
             className="hover-image hover4"
             onMouseEnter={() => setCurrentPhoto(3)}
             onMouseLeave={() => setCurrentPhoto(0)}
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
           >
             <div className="hover-line line4"></div>
-          </div> */}
+          </div>
           {item.oldprice > 0 ? (
             <div className="arrow-right">
-              <span style={{ paddingTop: "20px", color: "#ffffff" }}>
+              <span className="discount-text">
                 {`${item.oldprice && (item.price * 100) / item.oldprice}%`}
               </span>
             </div>
@@ -115,7 +129,8 @@ const Card1 = ({ item }) => {
           >
             <span className="font-title">{item.title}</span>
             <span className="font-price">
-              {item.price} <span className="font-price">р</span>
+              {item.price.toLocaleString().replace(",", " ")}{" "}
+              <span className="font-price">р</span>
               <span
                 style={{
                   marginLeft: "5px",
@@ -124,7 +139,9 @@ const Card1 = ({ item }) => {
                   fontWeight: "300",
                 }}
               >
-                {item.oldprice > 0 ? item.oldprice : null}
+                {item.oldprice > 0
+                  ? item.oldprice.toLocaleString().replace(",", " ")
+                  : null}
                 <span style={{ fontWeight: "300" }}>
                   {item.oldprice > 0 ? "р" : null}
                 </span>

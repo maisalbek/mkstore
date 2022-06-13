@@ -12,7 +12,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const useStyles = makeStyles(() => ({
-  paper: { maxWidth: "390px" },
+  paper: { maxWidth: "590px" },
 }));
 
 const MyDialog = ({ open, handleClose }) => {
@@ -89,14 +89,14 @@ const MyDialog = ({ open, handleClose }) => {
           <span className="float-menu-text">
             Оставьте заявку и мы обязательно Вам перезвоним
           </span>
-          <form style={{ width: "98.5%", margin: "0", marginTop: "12px" }}>
+          <form className="formdialog">
             <img
               style={{ margin: "0 15px", width: "20px" }}
               src={AccountIcon}
               alt=""
             />
             <input
-              className="float-input1"
+              id="float-input1"
               type="search"
               name="title"
               placeholder="Как вам обращаться?"
@@ -104,14 +104,14 @@ const MyDialog = ({ open, handleClose }) => {
               onChange={(e) => handleChange(e)}
             />
           </form>
-          <form style={{ width: "98.5%", margin: "0", marginTop: "10px" }}>
+          <form className="formdialog">
             <img
               style={{ margin: "0 15px", width: "20px" }}
               src={TelephoneIcon}
               alt=""
             />
             <input
-              className="float-input2"
+              id="float-input1"
               type="search"
               name="phone"
               placeholder="Номер телефона"

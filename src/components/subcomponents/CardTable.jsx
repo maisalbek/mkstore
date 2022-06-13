@@ -33,7 +33,7 @@ const CardTable = ({ item }) => {
         }}
       >
         <div className="cardTable-image-container">
-          <img
+          {/* <img
             width="262px"
             height="373px"
             src={item.image[currentPhoto]}
@@ -41,8 +41,13 @@ const CardTable = ({ item }) => {
               navigate(`/detail/${item.id}`);
             }}
             alt=""
-          />
-          {/* <Swiper className="mySwiper">
+          /> */}
+          <Swiper
+            className="mySwiper"
+            onClick={() => {
+              navigate(`/detail/${item.id}`);
+            }}
+          >
             <SwiperSlide style={{ position: "relative" }}>
               <img width="262px" height="373px" src={item.image[0]} alt="" />
               <div className="thover-line tline1"></div>
@@ -59,7 +64,7 @@ const CardTable = ({ item }) => {
               <img width="262px" height="373px" src={item.image[3]} alt="" />
               <div className="thover-line tline4"></div>
             </SwiperSlide>
-          </Swiper> */}
+          </Swiper>
           {inFav ? (
             <img
               src={heart}
@@ -101,7 +106,8 @@ const CardTable = ({ item }) => {
           >
             <span className="font-title">{item.title}</span>
             <span className="fp">
-              {item.price} <span className="fp">р</span>
+              {item.price.toLocaleString().replace(",", " ")}{" "}
+              <span className="fp">р</span>
               <span
                 style={{
                   marginLeft: "5px",
@@ -110,7 +116,9 @@ const CardTable = ({ item }) => {
                   fontWeight: "300",
                 }}
               >
-                {item.oldprice > 0 ? item.oldprice : null}
+                {item.oldprice > 0
+                  ? item.oldprice.toLocaleString().replace(",", " ")
+                  : null}
                 <span style={{ fontWeight: "300" }}>
                   {item.oldprice > 0 ? "р" : null}
                 </span>

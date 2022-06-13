@@ -20,7 +20,7 @@ import TableCardNovinki from "../subcomponents/TableCardNovinki";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cart, getCart, changeProductCount, deleteProdInCart } = useCart();
+  const { cart, getCart } = useCart();
   const [hide, setHide] = useState(false);
   const [novinkiData, setNovinkiData] = useState([]);
   const [open, setOpen] = useState(false);
@@ -166,12 +166,20 @@ const Cart = () => {
                   {cart.products && cart.totalCount} шт
                 </span>
                 <span className="countin">
-                  {cart.products && cart.totalCount * 5} шт
+                  {cart.products &&
+                    (cart.totalCount * 5)
+                      .toLocaleString()
+                      .replace(",", " ")}{" "}
+                  шт
                 </span>
-                <span className="countin">{cart.totalOldPrice * 5} рублей</span>
+                <span className="countin">
+                  {cart.totalOldPrice.toLocaleString().replace(",", " ")} рублей
+                </span>
                 <span className="countin">
                   {cart.totalOldPrice
-                    ? (cart.totalOldPrice - cart.totalCurrentPrice) * 5
+                    ? (cart.totalOldPrice - cart.totalCurrentPrice)
+                        .toLocaleString()
+                        .replace(",", " ")
                     : "0"}{" "}
                   рублей
                 </span>
@@ -204,9 +212,15 @@ const Cart = () => {
               >
                 <span className="countin">
                   {cart.totalOldPrice > 0
-                    ? cart.totalOldPrice * 5 -
-                      (cart.totalOldPrice - cart.totalCurrentPrice) * 5
-                    : cart.totalOldPrice * 5}{" "}
+                    ? (
+                        cart.totalOldPrice -
+                        (cart.totalOldPrice - cart.totalCurrentPrice)
+                      )
+                        .toLocaleString()
+                        .replace(",", " ")
+                    : cart.totalOldPrice
+                        .toLocaleString()
+                        .replace(",", " ")}{" "}
                   рублей
                 </span>
               </div>
@@ -273,14 +287,21 @@ const Cart = () => {
                     {cart.products && cart.totalCount} шт
                   </span>
                   <span className="countin">
-                    {cart.products && cart.totalCount * 5} шт
+                    {cart.products &&
+                      (cart.totalCount * 5)
+                        .toLocaleString()
+                        .replace(",", " ")}{" "}
+                    шт
                   </span>
                   <span className="countin">
-                    {cart.totalOldPrice * 5} рублей
+                    {cart.totalOldPrice.toLocaleString().replace(",", " ")}{" "}
+                    рублей
                   </span>
                   <span className="countin">
                     {cart.totalOldPrice
-                      ? (cart.totalOldPrice - cart.totalCurrentPrice) * 5
+                      ? (cart.totalOldPrice - cart.totalCurrentPrice)
+                          .toLocaleString()
+                          .replace(",", " ")
                       : "0"}{" "}
                     рублей
                   </span>
@@ -316,9 +337,15 @@ const Cart = () => {
                 <span className="countin">
                   {" "}
                   {cart.totalOldPrice > 0
-                    ? cart.totalOldPrice * 5 -
-                      (cart.totalOldPrice - cart.totalCurrentPrice) * 5
-                    : cart.totalOldPrice * 5}{" "}
+                    ? (
+                        cart.totalOldPrice -
+                        (cart.totalOldPrice - cart.totalCurrentPrice)
+                      )
+                        .toLocaleString()
+                        .replace(",", " ")
+                    : cart.totalOldPrice
+                        .toLocaleString()
+                        .replace(",", " ")}{" "}
                   рублей
                 </span>
               </div>

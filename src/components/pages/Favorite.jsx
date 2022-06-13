@@ -39,7 +39,6 @@ const Favorite = () => {
     <div
       style={{
         width: "100%",
-        backgroundColor: "#ECECEC",
         margin: "0 0 70px 0",
       }}
     >

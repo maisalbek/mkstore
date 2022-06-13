@@ -26,23 +26,16 @@ const CardCollection = ({ item }) => {
             height="100%"
             src={item.image[0]}
             alt=""
+          />
+          <div
+            className="collectiontitle2"
             onClick={() => {
               idForEdit(item.collection);
               navigate("/allcollection");
             }}
-          />
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "absolute",
-              zIndex: "4",
-              top: "90%",
-            }}
-          >
-            <span style={{ color: "#ffffff" }}>{item.collection}</span>
+          ></div>
+          <div className="collectiontitle">
+            <span className="collectiontext">{item.collection}</span>
           </div>
         </div>
 

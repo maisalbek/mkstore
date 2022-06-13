@@ -140,6 +140,7 @@
   left: 86%;
   color: white;
   cursor: pointer;
+  z-index: 9 !important;
 }
 .collectionarrow-right {
   position: absolute;

@@ -1,5 +1,5 @@
-import * as React from "react";
-import { NavLink, Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,6 +9,7 @@ import SearchIcon from "../images/searchIcon.svg";
 import BurgerMenu from "../images/coolicon.svg";
 import FavoriteIcon from "../images/FavoriteIcon.svg";
 import FavoriteIconbadge from "../images/FavoriteIconDot.svg";
+import Close from "../images/closeSearch.svg";
 import ShoppingBag from "../images/shopping-bag 1.svg";
 import ShoppingBagbad from "../images/shopping-bagDot.svg";
 import FloatMenu from "../subcomponents/FloatMenu";
@@ -19,15 +20,22 @@ import "./Navbar.css";
 import MyDrawer from "../subcomponents/MyDrawer";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import { useCart } from "../context/CartContextProvider";
+import { useSearchContext } from "../context/SearchContextProvider";
 
 export default function Navbar() {
-  const [headerInfo, setHeaderInfo] = React.useState({});
+  const [headerInfo, setHeaderInfo] = useState({});
   const { fav, getFav } = useFavorite();
+  const { ForSearch, getData, sendSearchData } = useSearchContext();
   const { cart, getCart } = useCart();
-  const [inFav, setInFav] = React.useState();
-  const [inCart, setInCart] = React.useState();
+  const [inFav, setInFav] = useState();
+  const [inCart, setInCart] = useState();
+  const [filteredData, setFilteredData] = useState([]);
+  const [close, setClose] = useState(false);
+  const [inpValue, setInpValue] = useState("");
+  const [searchInput, setSearchInput] = useState(false);
+  const navigate = useNavigate();
 
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     left: false,
   });
 
@@ -41,7 +49,8 @@ export default function Navbar() {
     setState({ ...state, [anchor]: open });
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
+    getData();
     axios.get(API2).then((response) => {
       setHeaderInfo(response.data);
     });
@@ -49,14 +58,64 @@ export default function Navbar() {
     getCart();
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     fav.products && fav.products.length > 0 ? setInFav(true) : setInFav(false);
   }, [fav.products]);
-  React.useEffect(() => {
+  useEffect(() => {
     cart.products && cart.products.length > 0
       ? setInCart(true)
       : setInCart(false);
   }, [cart.products]);
+
+  const handleFilter = (e) => {
+    setInpValue(e.target.value);
+    const newData = ForSearch.filter((elem) => {
+      if (e.target.value.trim().length > 0) {
+        if (elem.title.toLowerCase().includes(e.target.value.toLowerCase())) {
+          setClose(true);
+          return elem.title
+            .toLowerCase()
+            .includes(e.target.value.toLowerCase());
+        }
+      } else if (e.target.value.trim().length === 0) {
+        setClose(false);
+      }
+    });
+    setFilteredData(newData);
+  };
+
+  const handleClick = () => {
+    if (inpValue) {
+      sendSearchData(filteredData, inpValue);
+      setInpValue("");
+      setClose(false);
+      navigate("/search");
+    }
+  };
+
+  const handleSubmit = (str) => {
+    const newData = ForSearch.filter((elem) => {
+      if (str.trim().length > 0) {
+        if (elem.title.toLowerCase().includes(str.toLowerCase())) {
+          setClose(true);
+          return elem.title.toLowerCase().includes(str.toLowerCase());
+        }
+      } else if (str.trim().length === 0) {
+        setClose(false);
+      }
+    });
+    setFilteredData(newData);
+    if (str) {
+      sendSearchData(filteredData, str);
+      setInpValue("");
+      setClose(false);
+      navigate("/search");
+    }
+  };
+
+  const toggleSearch = () => {
+    searchInput ? setSearchInput(false) : setSearchInput(true);
+  };
 
   return (
     <Box
@@ -72,7 +131,7 @@ export default function Navbar() {
       }}
     >
       <AppBar position="static" className="navbar-container">
-        <Toolbar>
+        <Toolbar className="mobilenavbar">
           <Box sx={{ width: { xs: "0", md: "75px" } }} />
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <NavLink to="/about" style={{ textDecoration: "none" }}>
@@ -116,12 +175,18 @@ export default function Navbar() {
             sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
           >
             <span
-              style={{ color: "#393939", fontSize: "17px", fontWeight: "400" }}
+              style={{
+                color: "#393939",
+                fontSize: "17px",
+                fontWeight: "400",
+                cursor: "pointer",
+              }}
             >
               <span style={{ color: "#979797" }}>Тел: </span>
               {headerInfo.headerTel}
             </span>
           </Box>
+
           <Box sx={{ width: { xs: "0", md: "75px" } }} />
           <Box
             sx={{
@@ -154,15 +219,75 @@ export default function Navbar() {
                 style={{ width: "99px", height: "43px" }}
               />
             </Link>
-            <img src={SearchIcon} alt="" style={{ height: "18px" }} />
+            {searchInput ? (
+              <img
+                src={Close}
+                alt=""
+                style={{ height: "18px" }}
+                onClick={() => {
+                  toggleSearch();
+                }}
+              />
+            ) : (
+              <img
+                src={SearchIcon}
+                alt=""
+                style={{ height: "18px" }}
+                onClick={() => {
+                  toggleSearch();
+                }}
+              />
+            )}
           </Box>
+
+          {searchInput ? (
+            <div className="mobilesearch">
+              <input
+                type="search"
+                placeholder="Поиск"
+                onChange={handleFilter}
+                className="mobsearchinput"
+                value={inpValue}
+              />
+              <img
+                className="searchLoop"
+                onClick={handleClick}
+                src={SearchIcon}
+                alt=""
+              />
+            </div>
+          ) : null}
+
+          {searchInput && close ? (
+            <div className="mobilesearchhints">
+              {filteredData && filteredData.length > 0
+                ? filteredData.map((item) => (
+                    <span
+                      style={{
+                        padding: "14px 0 14px 0",
+                        borderBottom: "1px solid #d3d3d3",
+                        margin: "0 20px",
+                        textAlign: "start",
+                      }}
+                      key={item.id}
+                      onClick={() => {
+                        handleSubmit(item.title);
+                      }}
+                    >
+                      {item.title}
+                    </span>
+                  ))
+                : null}
+            </div>
+          ) : null}
         </Toolbar>
 
         <Toolbar
           sx={{
             display: { xs: "none", md: "flex" },
             alignItems: "center",
-            borderTop: "1px solid #e0e0e0",
+            borderTop: "1px solid #e9e9e9",
+            position: "relative",
           }}
           style={{ height: "88px" }}
         >
@@ -173,10 +298,46 @@ export default function Navbar() {
               style={{ height: "70px", padding: "9px 0" }}
             />
           </Link>
-          <form>
-            <input type="search" placeholder="Поиск" />
-            <button type="submit">Search</button>
-          </form>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "100%",
+              position: "relative",
+            }}
+          >
+            <input
+              type="search"
+              placeholder="Поиск"
+              onChange={handleFilter}
+              value={inpValue}
+            />
+            <img
+              className="searchloopdes"
+              onClick={handleClick}
+              src={SearchIcon}
+              alt=""
+            />
+            {close ? (
+              <div className="searchHint">
+                <div className="sear">
+                  {filteredData && filteredData.length > 0
+                    ? filteredData.map((item) => (
+                        <span
+                          className="searchhints"
+                          key={item.id}
+                          onClick={() => {
+                            handleSubmit(item.title);
+                          }}
+                        >
+                          {item.title}
+                        </span>
+                      ))
+                    : null}
+                </div>
+              </div>
+            ) : null}
+          </div>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
           <Link to="/favorite" style={{ textDecoration: "none" }}>

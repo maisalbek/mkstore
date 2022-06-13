@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { API10 } from "../constants/Constants";
+import "./Public.css";
 
 const Public = () => {
   const [publicData, setPublicData] = useState({});
@@ -30,12 +31,13 @@ const Public = () => {
         <span className="public2">Публичная оферта</span>
       </div>
       <div className="public-container">
-        <p>{publicData.paragraph1}</p>
-        <p>{publicData.paragraph2}</p>
-        <p>{publicData.paragraph3}</p>
-        <p>{publicData.paragraph4}</p>
-        <p>{publicData.paragraph5}</p>
-        <p>{publicData.paragraph6}</p>
+        <div className="overflow"></div>
+        <p className="ptexts">{publicData.paragraph1}</p>
+        <p className="ptexts">{publicData.paragraph2}</p>
+        <p className="ptexts">{publicData.paragraph3}</p>
+        <p className="ptexts">{publicData.paragraph4}</p>
+        <p className="ptexts">{publicData.paragraph5}</p>
+        <p className="ptexts">{publicData.paragraph6}</p>
       </div>
     </div>
   );

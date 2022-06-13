@@ -1,0 +1,59 @@
+.public-container {
+  margin: 0 99px;
+  padding: 16px;
+  text-align: start;
+  position: relative;
+}
+.public1 {
+  padding: 11px 99px 18px 99px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.public2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #393939;
+}
+@media all and (max-width: 899px) {
+  .public-container {
+    margin: 0 16px;
+  }
+  .public1 {
+    padding: 11px 16px 18px 16px;
+  }
+  .public2 {
+    font-size: 18px;
+  }
+  .publicOuter {
+    padding: 0 16px !important;
+  }
+}
+.overflow {
+  height: 258px;
+  width: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+.ptexts {
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 165%;
+  color: #5b5b5b;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}

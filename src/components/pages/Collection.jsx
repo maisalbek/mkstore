@@ -83,8 +83,11 @@ const CollectionPage = () => {
   }, [page]);
 
   return (
-    <div style={{ width: "100%", backgroundColor: "#ffffff" }}>
-      <div className="collectionOuterContainer">
+    <div style={{ width: "100%" }}>
+      <div
+        className="collectionOuterContainer"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         <span style={{ margin: "22px 0" }}>
           <Link to="/" style={{ textDecoration: "none", color: "#393939" }}>
             <span style={{ fontWeight: "500" }}>Главная</span>
@@ -96,7 +99,6 @@ const CollectionPage = () => {
       <div
         style={{
           width: "100%",
-          backgroundColor: "#ECECEC",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

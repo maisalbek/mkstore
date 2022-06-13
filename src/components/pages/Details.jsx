@@ -19,7 +19,7 @@ import {
 import TableCardNovinki from "../subcomponents/TableCardNovinki";
 import CardTabledet from "../subcomponents/CardTabledet";
 import { useFavorite } from "../context/FavoriteContextProvider";
-import heart from "../images/hearticon.svg";
+import heart from "../images/whiteheart.svg";
 import { useCart } from "../context/CartContextProvider";
 
 const Details = () => {
@@ -83,7 +83,6 @@ const Details = () => {
     <div
       style={{
         width: "100%",
-        backgroundColor: "#ECECEC",
         margin: "0 0 70px 0",
       }}
     >
@@ -122,10 +121,10 @@ const Details = () => {
               <TableHead>
                 <TableRow>
                   {novinkiData && novinkiData.length > 0
-                    ? novinkiData.map((item) => (
+                    ? novinkiData.map((item, index) => (
                         <TableCell
                           style={{ padding: "0 5px 0 0 " }}
-                          key={item.id / 1.5}
+                          key={index}
                         >
                           <CardTabledet item={item} />
                         </TableCell>
@@ -148,6 +147,7 @@ const Details = () => {
             {prodData.colors && prodData.colors.length > 0
               ? prodData.colors.map((item1, index) => (
                   <div
+                    key={index}
                     style={{
                       backgroundColor: `${item1}`,
                       marginRight: "15px",
@@ -220,6 +220,7 @@ const Details = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor: "pointer",
                 }}
                 onClick={() => {
                   navigate("/cart");
@@ -238,6 +239,7 @@ const Details = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor: "pointer",
                 }}
                 onClick={() => {
                   addDelToCart(prodData);
@@ -289,8 +291,8 @@ const Details = () => {
           {prodData.image && prodData.image.length > 0 ? (
             prodData.image
               .slice(0, 4)
-              .map((item) => (
-                <img className="detailimg" key={item} src={item} alt="" />
+              .map((item, index) => (
+                <img className="detailimg" key={index} src={item} alt="" />
               ))
           ) : (
             <MySkeleton />
@@ -307,6 +309,7 @@ const Details = () => {
             {prodData.colors && prodData.colors.length > 0
               ? prodData.colors.map((item1, index) => (
                   <div
+                    key={index}
                     style={{
                       backgroundColor: `${item1}`,
                       marginRight: "15px",
@@ -396,6 +399,7 @@ const Details = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor: "pointer",
                 }}
                 onClick={() => {
                   navigate("/cart");
@@ -414,6 +418,7 @@ const Details = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor: "pointer",
                 }}
                 onClick={() => {
                   addDelToCart(prodData);
@@ -454,8 +459,8 @@ const Details = () => {
         {prodData.image && prodData.image.length > 0 ? (
           prodData.image
             .slice(0, 4)
-            .map((item) => (
-              <img width="150px" height="220px" key={item} src={item} alt="" />
+            .map((item, index) => (
+              <img width="150px" height="220px" key={index} src={item} alt="" />
             ))
         ) : (
           <MySkeleton />
