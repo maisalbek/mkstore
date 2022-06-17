@@ -2,18 +2,20 @@ import React from "react";
 import send from "../images/sendImage.svg";
 import { makeStyles } from "@mui/styles";
 import { Dialog, Slide } from "@mui/material";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContextProvider";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 const useStyles = makeStyles(() => ({
-  paper: { maxWidth: "390px" },
+  paper: { width: "390px" },
 }));
 const SuccesDialog = ({ open2, handleClose2 }) => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const { ClearCart } = useCart();
 
   return (
     <Dialog
@@ -40,6 +42,7 @@ const SuccesDialog = ({ open2, handleClose2 }) => {
           onClick={() => {
             handleClose2();
             navigate("/");
+            ClearCart();
           }}
         >
           Продолжить покупки

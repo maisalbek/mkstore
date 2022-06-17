@@ -31,9 +31,8 @@ const CartCard = ({ item1 }) => {
           {item1.item.price.toLocaleString().replace(",", " ")} р{" "}
           <span className="oldprice">
             {item1.item.oldprice
-              ? item1.item.oldprice.toLocaleString().replace(",", " ")
+              ? item1.item.oldprice.toLocaleString().replace(",", " ") + "р"
               : null}{" "}
-            р
           </span>
         </span>
         <div style={{ display: "flex" }}>

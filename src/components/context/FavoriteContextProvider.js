@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContextProvider";
 
 const favoriteContext = createContext();
 export const useFavorite = () => {
@@ -22,6 +24,8 @@ function reducer(state = INIT_STATE, action) {
 
 const FavoriteContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   function createFavFromLS() {
     let fav = JSON.parse(localStorage.getItem("fav"));
@@ -36,26 +40,30 @@ const FavoriteContextProvider = ({ children }) => {
   }
 
   const addDelToFav = (prod) => {
-    let fav = createFavFromLS();
-    let newProd = {
-      item: prod,
-    };
+    if (currentUser.isLogged) {
+      let fav = createFavFromLS();
+      let newProd = {
+        item: prod,
+      };
 
-    let checkProdInFav = fav.products.some((obj) => {
-      return obj.item.id === prod.id;
-    });
-    if (checkProdInFav) {
-      fav.products = fav.products.filter((obj) => {
-        return obj.item.id !== prod.id;
+      let checkProdInFav = fav.products.some((obj) => {
+        return obj.item.id === prod.id;
+      });
+      if (checkProdInFav) {
+        fav.products = fav.products.filter((obj) => {
+          return obj.item.id !== prod.id;
+        });
+      } else {
+        fav.products.push(newProd);
+      }
+      localStorage.setItem("fav", JSON.stringify(fav));
+      dispatch({
+        type: "GET_FAV",
+        payload: fav,
       });
     } else {
-      fav.products.push(newProd);
+      navigate("/login");
     }
-    localStorage.setItem("fav", JSON.stringify(fav));
-    dispatch({
-      type: "GET_FAV",
-      payload: fav,
-    });
   };
 
   const isProdInFav = (id) => {
@@ -75,12 +83,16 @@ const FavoriteContextProvider = ({ children }) => {
   };
 
   const deleteProdInFav = (id) => {
-    let fav = createFavFromLS();
-    fav.products = fav.products.filter((elem) => {
-      return elem.item.id !== id;
-    });
-    localStorage.setItem("fav", JSON.stringify(fav));
-    getFav();
+    if (currentUser.isLogged) {
+      let fav = createFavFromLS();
+      fav.products = fav.products.filter((elem) => {
+        return elem.item.id !== id;
+      });
+      localStorage.setItem("fav", JSON.stringify(fav));
+      getFav();
+    } else {
+      navigate("/login");
+    }
   };
 
   return (

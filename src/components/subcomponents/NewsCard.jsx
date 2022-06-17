@@ -22,7 +22,7 @@ const NewsCard = ({ item }) => {
           </span>
           <span className="newsTextShown">{item.text}</span>
           <span className="newsTextHided">
-            {isShown ? item.text : item.text.substr(0, 200)}
+            {isShown ? item.text : item.text.substr(0, 200) + ".."}
           </span>
           <button
             className="hide-btn"

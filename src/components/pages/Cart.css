@@ -47,6 +47,7 @@
   font-size: 14px;
   line-height: 17px;
   color: #393939;
+  text-align: start;
   flex: none;
   margin-bottom: 15px;
 }
@@ -202,6 +203,7 @@
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .dialogtitle {
   font-family: "Montserrat";
@@ -247,9 +249,30 @@
 .orderformerror {
   border: 1px solid #f10000;
   margin: 0;
+  color: #f8f8f8;
+  display: flex;
+  padding: 2px;
+  border-radius: 0;
+  width: 98.5%;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 .inpCl {
   padding-left: 12px;
+  /* height: 100%; */
+}
+@media all and (max-width: 899px) {
+  .inpCl {
+    font-size: 12px !important;
+  }
+}
+.orderform2 {
+  border: 1px solid #e7e7e7 !important;
+  display: flex;
+  align-items: center;
 }
 .puboff {
   font-family: "Montserrat";
@@ -374,6 +397,7 @@ input[type="email"]::-ms-reveal {
   padding: 12px;
   display: flex;
   flex-direction: column;
+  position: "relative";
 }
 .dialogtitle2 {
   font-family: "Montserrat";
@@ -431,7 +455,6 @@ input[type="email"]::-ms-reveal {
   align-items: center;
   padding: 14px 20px 13px;
   gap: 10px;
-  /* width: 100%; */
   height: 25px;
   color: #ffffff;
   background: linear-gradient(
@@ -450,12 +473,11 @@ input[type="email"]::-ms-reveal {
   align-items: center;
   padding: 14px 20px 13px;
   gap: 10px;
-  height: 30px;
-  background: #1d1d1b;
-  cursor: pointer;
+  height: 25px;
+  color: #ffffff;
   flex: none;
   margin-top: 20px;
-  color: #ffffff;
+  background: #1d1d1b;
 }
 .mobilever2 {
   display: none !important;

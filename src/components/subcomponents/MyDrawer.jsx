@@ -6,28 +6,24 @@ import Telegram from "../images/telegram.svg";
 import WhatsApp from "../images/whatsapp.svg";
 import Telephone from "../images/telephone.svg";
 import FavoriteIcon from "../images/FavoriteIcon.svg";
-import MyDialog from "./MyDialog";
 import FavoriteIconbadge from "../images/FavoriteIconDot.svg";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import { useCart } from "../context/CartContextProvider";
 import ShoppingBag from "../images/shopping-bag 1.svg";
 import ShoppingBagbad from "../images/shopping-bagDot.svg";
+import { useAuth } from "../context/AuthContextProvider";
 
-const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
-  const [open, setOpen] = useState(false);
-  const [contact, setContact] = useState({});
+const MyDrawer = ({
+  toggleDrawer,
+  state,
+  headerInfo,
+  handleClickOpenMyDialog,
+}) => {
   const { fav, getFav } = useFavorite();
-  const [inFav, setInFav] = React.useState();
+  const [inFav, setInFav] = useState();
   const { cart, getCart } = useCart();
-  const [inCart, setInCart] = React.useState();
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const [inCart, setInCart] = useState();
+  const { currentUser, logOutUser } = useAuth();
 
   React.useEffect(() => {
     getFav();
@@ -48,7 +44,7 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
       }}
       anchor={"left"}
       open={state["left"]}
-      onClose={toggleDrawer("left", false)}
+      onClose={() => toggleDrawer("left", false)}
     >
       <div
         style={{
@@ -73,7 +69,7 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
           >
             Меню
           </span>
-          <CloseIcon onClick={toggleDrawer("left", false)} />
+          <CloseIcon onClick={() => toggleDrawer("left", false)} />
         </div>
         <NavLink
           to="/about"
@@ -83,7 +79,7 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
             color: "#393939",
           }}
         >
-          <span onClick={toggleDrawer("left", false)}>О нас</span>
+          <span onClick={() => toggleDrawer("left", false)}>О нас</span>
         </NavLink>
         <NavLink
           to="/news"
@@ -93,7 +89,7 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
             color: "#393939",
           }}
         >
-          <span onClick={toggleDrawer("left", false)}>Новости</span>
+          <span onClick={() => toggleDrawer("left", false)}>Новости</span>
         </NavLink>
         <NavLink
           to="/collection"
@@ -103,8 +99,32 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
             color: "#393939",
           }}
         >
-          <span onClick={toggleDrawer("left", false)}>Коллекция</span>
+          <span onClick={() => toggleDrawer("left", false)}>Коллекция</span>
         </NavLink>
+        {currentUser.isLogged ? (
+          <span onClick={logOutUser} style={{ marginTop: "20px" }}>
+            <span onClick={() => toggleDrawer("left", false)}>Выйти</span>
+          </span>
+        ) : null}
+        {currentUser.isLogged ? (
+          <span
+            style={{ marginTop: "20px" }}
+            onClick={() => toggleDrawer("left", false)}
+          >
+            {currentUser.user}
+          </span>
+        ) : (
+          <NavLink to="/login" style={{ marginTop: "20px", color: "#393939" }}>
+            <span onClick={() => toggleDrawer("left", false)}>Войти</span>
+          </NavLink>
+        )}
+        <span
+          style={{
+            width: "100%",
+            borderTop: "1px solid #e0e0e0",
+            marginTop: "14px",
+          }}
+        ></span>
         <Link to="/favorite" style={{ textDecoration: "none" }}>
           <span
             style={{
@@ -113,10 +133,8 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
               fontWeight: "400",
               display: "flex",
               marginTop: "14px",
-              paddingTop: "14px",
-              borderTop: "1px solid #e0e0e0",
             }}
-            onClick={toggleDrawer("left", false)}
+            onClick={() => toggleDrawer("left", false)}
           >
             {inFav ? (
               <img
@@ -145,7 +163,7 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
               display: "flex",
               marginTop: "20px",
             }}
-            onClick={toggleDrawer("left", false)}
+            onClick={() => toggleDrawer("left", false)}
           >
             {inCart ? (
               <img
@@ -180,7 +198,7 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
                 fontSize: "18px",
                 marginBottom: "8px",
               }}
-              onClick={toggleDrawer("left", false)}
+              onClick={() => toggleDrawer("left", false)}
             >
               Свяжитсь с нами:
             </span>
@@ -194,7 +212,7 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
             >
               <span
                 style={{ color: "#979797" }}
-                onClick={toggleDrawer("left", false)}
+                onClick={() => toggleDrawer("left", false)}
               >
                 Тел:{" "}
               </span>
@@ -226,14 +244,13 @@ const MyDrawer = ({ toggleDrawer, state, headerInfo }) => {
                 alt=""
                 onClick={() => {
                   toggleDrawer("left", false);
-                  handleClickOpen();
+                  handleClickOpenMyDialog();
                 }}
               />
             </div>
           </div>
         </div>
       </div>
-      <MyDialog handleClose={handleClose} open={open} />
     </Drawer>
   );
 };

@@ -76,3 +76,28 @@
     width: 92.5%;
   }
 }
+.question {
+  text-align: start;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  font-style: normal;
+  line-height: 20px;
+  color: #393939;
+  order: 0;
+  flex-grow: 0;
+  cursor: pointer !important;
+}
+.answer {
+  text-align: start;
+  margin-top: 10px;
+  line-height: 160%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #354455;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}

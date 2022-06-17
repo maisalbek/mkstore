@@ -20,13 +20,30 @@ import "./Favorite.css";
 const Favorite = () => {
   const { fav, getFav } = useFavorite();
   const [novinkiData, setNovinkiData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [limit, setLimit] = useState(12);
+  const [moblimit, setMobLimit] = useState(4);
+  const [currentDataForRender, setCurrentDataForRender] = useState([]);
+
+  useEffect(() => {
+    if (fav.products) {
+      if (window.innerWidth < 899) {
+        const indexOfLast = currentPage * moblimit;
+        const currentData = fav.products.slice(0, indexOfLast);
+        setCurrentDataForRender(currentData);
+      } else {
+        const indexOfLast = currentPage * limit;
+        const currentData = fav.products.slice(0, indexOfLast);
+        setCurrentDataForRender(currentData);
+      }
+    }
+  }, [currentPage, fav.products]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     getFav();
     axios.get(API).then((res) => {
       let newArr = res.data.filter(
@@ -35,6 +52,37 @@ const Favorite = () => {
       setNovinkiData(newArr.splice(0, 5));
     });
   }, []);
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+    return function () {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [currentPage]);
+
+  const handleScroll = (e) => {
+    if (window.innerWidth < 899) {
+      if (
+        e.target.documentElement.scrollHeight -
+          400 -
+          (window.innerHeight + e.target.documentElement.scrollTop) <
+        390
+      ) {
+        setCurrentPage((prev) => prev + 1);
+        console.log("first");
+      }
+    } else {
+      if (
+        e.target.documentElement.scrollHeight -
+          (window.innerHeight + e.target.documentElement.scrollTop) <
+        0.5
+      ) {
+        setCurrentPage((prev) => prev + 1);
+        console.log("first");
+      }
+    }
+  };
+
   return (
     <div
       style={{
@@ -60,8 +108,8 @@ const Favorite = () => {
         </span>
       </div>
       <div className="allcollection-container favowncon">
-        {fav.products && fav.products.length > 0
-          ? fav.products.map((item1) => (
+        {currentDataForRender && currentDataForRender.length > 0
+          ? currentDataForRender.map((item1) => (
               <Card1 key={item1.item.id} item={item1.item} />
             ))
           : null}

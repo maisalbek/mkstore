@@ -26,11 +26,13 @@ const Details = () => {
   const [novinkiData, setNovinkiData] = useState([]);
   const [prodData, setProdData] = useState({});
   const { typeCollection } = useProductContext();
+  const [transform, setTransform] = useState(5);
   const { addDelToFav, getFav, fav, isProdInFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(prodData.id));
   const { prodId } = useParams();
   const { addDelToCart, getCart, cart, isProdInCart } = useCart();
   const navigate = useNavigate();
+
   const [inCart, setInCart] = React.useState(
     isProdInCart(prodData.id, prodData.color)
   );
@@ -158,7 +160,8 @@ const Details = () => {
                     onClick={() => {
                       handleItemClick(index, item1);
                     }}
-                    id="colordots"
+                    // id="colordot"
+                    id={item1 !== prodData.color ? null : "colordot"}
                   ></div>
                 ))
               : null}
@@ -289,11 +292,18 @@ const Details = () => {
       <div className="detailsOuter-container">
         <div className="details-container">
           {prodData.image && prodData.image.length > 0 ? (
-            prodData.image
-              .slice(0, 4)
-              .map((item, index) => (
-                <img className="detailimg" key={index} src={item} alt="" />
-              ))
+            prodData.image.slice(0, 4).map((item, index) => (
+              <img
+                id="detailimg"
+                className="detailimg"
+                key={index}
+                src={item}
+                alt=""
+                onClick={() => {
+                  setTransform(index);
+                }}
+              />
+            ))
           ) : (
             <MySkeleton />
           )}
@@ -320,7 +330,7 @@ const Details = () => {
                     onClick={() => {
                       handleItemClick(index, item1);
                     }}
-                    id="colordots"
+                    id={item1 !== prodData.color ? null : "colordot"}
                   ></div>
                 ))
               : null}

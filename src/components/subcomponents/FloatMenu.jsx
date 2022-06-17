@@ -8,11 +8,22 @@ import CloseIcon from "../images/CloseIcon.svg";
 import { API1 } from "../constants/Constants";
 import axios from "axios";
 import MyDialog from "./MyDialog";
+import { useLocation } from "react-router-dom";
 
 const FloatMenu = () => {
   const [floatButton, setFloatButton] = useState(false);
   const [open, setOpen] = useState(false);
   const [contact, setContact] = useState({});
+  const [checkPage, setCheckPage] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.includes("/detail/")) {
+      setCheckPage(false);
+    } else {
+      setCheckPage(true);
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     axios.get(API1).then((response) => {
@@ -29,10 +40,6 @@ const FloatMenu = () => {
     setFloatButton(false);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
     <div>
       <div
@@ -42,12 +49,15 @@ const FloatMenu = () => {
           justifyContent: "center",
           alignItems: "center",
           position: "fixed",
-          left: "90%",
+          left: checkPage ? "91%" : "94%",
           top: "80%",
-          zIndex: 3,
+          zIndex: 100,
         }}
       >
-        <div className="float-menu">
+        <div
+          className="float-menu"
+          style={{ position: "relative", zIndex: "99" }}
+        >
           <img
             onClick={() => {
               window.scrollTo({
@@ -55,7 +65,13 @@ const FloatMenu = () => {
                 behavior: "smooth",
               });
             }}
-            style={{ width: "25px", marginBottom: "30px", cursor: "pointer" }}
+            style={{
+              width: "25px",
+              marginBottom: "30px",
+              cursor: "pointer",
+              position: "relative",
+              zIndex: "96",
+            }}
             src={ArrowUp}
             alt=""
           />
@@ -106,7 +122,7 @@ const FloatMenu = () => {
           />
         </div>
       ) : null}
-      <MyDialog handleClose={handleClose} open={open} />
+      <MyDialog open={open} setOpen={setOpen} />
     </div>
   );
 };

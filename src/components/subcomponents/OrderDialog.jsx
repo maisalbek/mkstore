@@ -5,10 +5,18 @@ import { makeStyles } from "@mui/styles";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { API9 } from "../constants/Constants";
 import SuccesDialog from "./SuccesDialog";
+import close from "../images/CloseIcon.svg";
+import { useCart } from "../context/CartContextProvider";
 
+const INIT_VALUES = {
+  name: "",
+  surname: "",
+  email: "",
+  phone: "",
+  country: "",
+  city: "",
+};
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -18,19 +26,12 @@ const useStyles = makeStyles(() => ({
 }));
 
 const OrderDialog = ({ open, handleClose }) => {
-  const [inpValues, setInpValues] = useState({
-    name: "",
-    surname: "",
-    email: "",
-    checkbox: false,
-    phone: "",
-    country: "",
-    city: "",
-  });
+  const [inpValues, setInpValues] = useState(INIT_VALUES);
   const [phone, setPhone] = useState("");
   const [isFilled, setIsFilled] = useState(false);
   const [phoneCheck, setPhoneCheck] = useState(true);
   const [emailCheck, setEmailCheck] = useState(true);
+  const { sendOrderData } = useCart();
   const classes = useStyles();
 
   const [open2, setOpen2] = useState(false);
@@ -44,78 +45,73 @@ const OrderDialog = ({ open, handleClose }) => {
   };
 
   useEffect(() => {
-    if (
-      inpValues.name !== "" &&
-      inpValues.surname !== "" &&
-      inpValues.email !== "" &&
-      inpValues.checked !== true &&
-      inpValues.phone !== "" &&
-      inpValues.country !== "" &&
-      inpValues.city !== ""
-    ) {
-      setIsFilled(true);
-    } else {
-      setIsFilled(false);
-    }
-  }, [inpValues.email]);
+    checkInput();
+  }, [inpValues]);
   useEffect(() => {
-    let regexPhone = /^.{9,17}$/;
-    if (regexPhone.test(phone)) {
-      setIsFilled(true);
-    } else {
-      setIsFilled(false);
-    }
+    handleChangePhoneInput();
   }, [phone]);
 
   const handleChange = (e) => {
     let obj = {
       ...inpValues,
-      phone: phone,
-      checked: e.target.checked,
       [e.target.name]: e.target.value,
     };
     setInpValues(obj);
+    checkInput();
+  };
+  const handleChangePhoneInput = () => {
+    let obj = {
+      ...inpValues,
+      phone: phone,
+    };
+    setInpValues(obj);
+    checkInput();
+  };
+  const handleChangeCheckBox = (e) => {
+    let obj = {
+      ...inpValues,
+      checked: e.target.checked,
+    };
+    setInpValues(obj);
+    checkInput();
+  };
+
+  const checkInput = () => {
     if (
-      inpValues.name !== "" &&
-      inpValues.surname !== "" &&
-      inpValues.email !== "" &&
-      inpValues.checked !== true &&
-      phone !== "" &&
-      inpValues.country !== "" &&
-      inpValues.city !== ""
+      !inpValues.name ||
+      !inpValues.surname ||
+      !inpValues.email ||
+      !inpValues.checked ||
+      !inpValues.phone ||
+      !inpValues.country ||
+      !inpValues.city
     ) {
-      setIsFilled(true);
-    } else {
       setIsFilled(false);
+    } else {
+      setIsFilled(true);
     }
   };
 
   const handleClick = () => {
+    let regexEmail = /\S+@\S+\.\S+/;
     let regexPhone = /^.{9,17}$/;
-    let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regexEmail.test(inpValues.email) || !regexPhone.test(phone)) {
+    if (
+      regexPhone.test(inpValues.phone) === false ||
+      regexEmail.test(inpValues.email) === false
+    ) {
       setIsFilled(false);
-      if (!regexEmail.test(inpValues.email)) {
-        setEmailCheck(false);
-      } else if (!regexPhone.test(phone)) {
+      if (regexPhone.test(inpValues.phone) === false) {
         setPhoneCheck(false);
-      } else {
-        setPhoneCheck(false);
+      } else if (regexEmail.test(inpValues.email) === false) {
         setEmailCheck(false);
       }
-    } else if (regexEmail.test(inpValues.email) && regexPhone.test(phone)) {
-      axios.post(API9, inpValues).then((res) => {});
+    } else if (
+      regexPhone.test(inpValues.phone) === true &&
+      regexEmail.test(inpValues.email) === true
+    ) {
+      sendOrderData(inpValues);
       handleClose();
       handleClickOpen2();
-      setInpValues({
-        name: "",
-        surname: "",
-        email: "",
-        checked: false,
-        phone: "",
-        country: "",
-        city: "",
-      });
     }
   };
   return (
@@ -128,6 +124,21 @@ const OrderDialog = ({ open, handleClose }) => {
       aria-describedby="alert-dialog-slide-description"
     >
       <div className="orderdialog">
+        <img
+          src={close}
+          alt=""
+          style={{
+            width: "14px",
+            height: "14px",
+            position: "absolute",
+            top: "4%",
+            left: "92%",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            handleClose();
+          }}
+        />
         <span className="dialogtitle">Оформление заказа</span>
         <span className="labels">Ваше имя</span>
         <form className="orderform">
@@ -225,7 +236,7 @@ const OrderDialog = ({ open, handleClose }) => {
             name="checkbox"
             required
             onChange={(e) => {
-              handleChange(e);
+              handleChangeCheckBox(e);
             }}
           />
           <span className="puboff">

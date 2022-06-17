@@ -4,19 +4,22 @@ import ProductContextProvider from "./components/context/ProductContextProvider"
 import FavoriteContextProvider from "./components/context/FavoriteContextProvider";
 import CartContextProvider from "./components/context/CartContextProvider";
 import SearchContextProvider from "./components/context/SearchContextProvider";
+import AuthContextProvider from "./components/context/AuthContextProvider";
 
 function App() {
   return (
     <div className="App">
-      <SearchContextProvider>
-        <CartContextProvider>
-          <FavoriteContextProvider>
-            <ProductContextProvider>
-              <MyRoutes />
-            </ProductContextProvider>
-          </FavoriteContextProvider>
-        </CartContextProvider>
-      </SearchContextProvider>
+      <AuthContextProvider>
+        <SearchContextProvider>
+          <CartContextProvider>
+            <FavoriteContextProvider>
+              <ProductContextProvider>
+                <MyRoutes />
+              </ProductContextProvider>
+            </FavoriteContextProvider>
+          </CartContextProvider>
+        </SearchContextProvider>
+      </AuthContextProvider>
     </div>
   );
 }

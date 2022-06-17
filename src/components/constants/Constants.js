@@ -10,6 +10,8 @@ export const API8 = "http://localhost:8001/help"; //help
 export const API9 = "http://localhost:8001/orderData"; //orderData
 export const API10 = "http://localhost:8001/publicOffer"; //publicOffer
 
+export const ADMIN_EMAIL = "admin-zeon@gmail.com";
+
 export const CART = {
   GET_CART_LENGTH: "GET_CART_LENGTH",
   GET_CART: "GET_CART",

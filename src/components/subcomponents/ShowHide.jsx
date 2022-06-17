@@ -22,39 +22,14 @@ const ShowHide = ({ item }) => {
           alignItems: "center",
         }}
       >
-        <span
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "16px",
-            fontWeight: "500",
-            lineHeight: "20px",
-            color: "black",
-          }}
-        >
-          {item.question}
-        </span>
+        <span className="question">{item.question}</span>
         {isShown ? (
           <FontAwesomeIcon icon={faChevronUp} />
         ) : (
           <FontAwesomeIcon icon={faChevronDown} />
         )}
       </div>
-      {isShown ? (
-        <span
-          style={{
-            textAlign: "start",
-            marginTop: "10px",
-            color: "#354455",
-            fontWeight: "200",
-            lineHeight: "160%",
-            fontSize: "14px",
-          }}
-        >
-          {item.answer}
-        </span>
-      ) : null}
+      {isShown ? <span className="answer">{item.answer}</span> : null}
     </div>
   );
 };

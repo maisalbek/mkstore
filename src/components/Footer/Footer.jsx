@@ -48,18 +48,21 @@ const Footer = () => {
           </div>
           <div className="footer-block">
             <span className="footer-header-text">Контакты</span>
-            <span className="footer-text-items">
+            <a href={"tel:" + contact.footerTel1} className="footer-text-items">
               <img className="footerIcons" src={telephone} alt="" />
               {contact.footerTel1}
-            </span>
-            <span className="footer-text-items">
+            </a>
+            <a href={"tel:" + contact.footerTel2} className="footer-text-items">
               <img className="footerIcons" src={telephone} alt="" />
               {contact.footerTel2}
-            </span>
-            <span className="footer-text-items">
+            </a>
+            <a
+              href="mailto:maysalbek1972@gmail.com"
+              className="footer-text-items"
+            >
               <img className="footerIcons" src={footermail} alt="" />
               {contact.mail}
-            </span>
+            </a>
           </div>
           <div className="footer-block">
             <span className="footer-header-text">Мы в социальных сетях:</span>

@@ -20,7 +20,7 @@ import TableCardNovinki from "../subcomponents/TableCardNovinki";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cart, getCart } = useCart();
+  const { cart, getCart, cartLength } = useCart();
   const [hide, setHide] = useState(false);
   const [novinkiData, setNovinkiData] = useState([]);
   const [open, setOpen] = useState(false);
@@ -46,6 +46,7 @@ const Cart = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    getCart();
   }, []);
 
   useEffect(() => {
@@ -271,8 +272,7 @@ const Cart = () => {
                     alignItems: "flex-start",
                   }}
                 >
-                  <span className="countin">Количество линеек:</span>
-                  <span className="countin">Количество товаров:</span>
+                  <span className="countin">Общее количество:</span>
                   <span className="countin">Стоимость:</span>
                   <span className="countin">Скидка:</span>
                 </div>
@@ -284,15 +284,16 @@ const Cart = () => {
                   }}
                 >
                   <span className="countin">
-                    {cart.products && cart.totalCount} шт
-                  </span>
-                  <span className="countin">
                     {cart.products &&
-                      (cart.totalCount * 5)
-                        .toLocaleString()
-                        .replace(",", " ")}{" "}
-                    шт
+                      cart.totalCount +
+                        " линеек " +
+                        "(" +
+                        (cart.totalCount * 5)
+                          .toLocaleString()
+                          .replace(",", " ") +
+                        " шт)"}
                   </span>
+
                   <span className="countin">
                     {cart.totalOldPrice.toLocaleString().replace(",", " ")}{" "}
                     рублей

@@ -1,5 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import {
+  NavLink,
+  Link,
+  useNavigate,
+  useSearchParams,
+  useLocation,
+} from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -21,6 +27,10 @@ import MyDrawer from "../subcomponents/MyDrawer";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import { useCart } from "../context/CartContextProvider";
 import { useSearchContext } from "../context/SearchContextProvider";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { useAuth } from "../context/AuthContextProvider";
+import AccountMenu from "../subcomponents/AccountMenu";
+import MyDialog from "../subcomponents/MyDialog";
 
 export default function Navbar() {
   const [headerInfo, setHeaderInfo] = useState({});
@@ -33,21 +43,34 @@ export default function Navbar() {
   const [close, setClose] = useState(false);
   const [inpValue, setInpValue] = useState("");
   const [searchInput, setSearchInput] = useState(false);
+  const [showFloat, setShowFloat] = useState(true);
+  const { currentUser, logOutUser } = useAuth();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [open, setOpen] = useState(false);
+
   const navigate = useNavigate();
 
-  const [state, setState] = useState({
-    left: false,
-  });
+  const [state, setState] = useState(false);
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.location.href.includes("cart")) {
+      setShowFloat(false);
+    } else {
+      setShowFloat(true);
     }
+  }, [location.pathname]);
+
+  const toggleDrawer = (anchor, open) => {
     setState({ ...state, [anchor]: open });
   };
+
+  useEffect(() => {
+    setClose(false);
+    setInpValue("");
+    setSearchInput(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     getData();
@@ -81,6 +104,7 @@ export default function Navbar() {
         setClose(false);
       }
     });
+
     setFilteredData(newData);
   };
 
@@ -115,6 +139,18 @@ export default function Navbar() {
 
   const toggleSearch = () => {
     searchInput ? setSearchInput(false) : setSearchInput(true);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClickOpenMyDialog = () => {
+    setOpen(true);
   };
 
   return (
@@ -174,7 +210,8 @@ export default function Navbar() {
           <Box
             sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
           >
-            <span
+            <a
+              href={"tel:" + headerInfo.headerTel}
               style={{
                 color: "#393939",
                 fontSize: "17px",
@@ -184,7 +221,37 @@ export default function Navbar() {
             >
               <span style={{ color: "#979797" }}>Тел: </span>
               {headerInfo.headerTel}
-            </span>
+            </a>
+          </Box>
+          <Box
+            sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
+          >
+            {currentUser.isLogged ? (
+              <AccountCircleIcon
+                sx={{
+                  color: "#1d1d1d",
+                  fontSize: "xx-large",
+                  marginLeft: "20px",
+                }}
+                onClick={handleMenu}
+              />
+            ) : (
+              <span
+                style={{
+                  color: "#393939",
+                  fontSize: "17px",
+                  fontWeight: "400",
+                  cursor: "pointer",
+                  marginLeft: "20px",
+                }}
+                onClick={() => {
+                  currentUser.isLogged ? handleMenu() : navigate("/login");
+                }}
+              >
+                Войти
+              </span>
+            )}
+            <AccountMenu anchorEl={anchorEl} handleClose={handleClose} />
           </Box>
 
           <Box sx={{ width: { xs: "0", md: "75px" } }} />
@@ -201,7 +268,7 @@ export default function Navbar() {
               size="large"
               aria-label="show more"
               aria-haspopup="true"
-              onClick={toggleDrawer("left", true)}
+              onClick={() => toggleDrawer("left", true)}
               color="inherit"
               sx={{ borderRadius: "0", border: "1px solid #EDEDED" }}
             >
@@ -211,7 +278,9 @@ export default function Navbar() {
               state={state}
               toggleDrawer={toggleDrawer}
               headerInfo={headerInfo}
+              handleClickOpenMyDialog={handleClickOpenMyDialog}
             />
+            <MyDialog open={open} setOpen={setOpen} />
             <Link to="/">
               <img
                 src={Logo}
@@ -248,6 +317,7 @@ export default function Navbar() {
                 onChange={handleFilter}
                 className="mobsearchinput"
                 value={inpValue}
+                onKeyPress={(e) => e.key === "Enter" && handleClick()}
               />
               <img
                 className="searchLoop"
@@ -263,12 +333,7 @@ export default function Navbar() {
               {filteredData && filteredData.length > 0
                 ? filteredData.map((item) => (
                     <span
-                      style={{
-                        padding: "14px 0 14px 0",
-                        borderBottom: "1px solid #d3d3d3",
-                        margin: "0 20px",
-                        textAlign: "start",
-                      }}
+                      className="hintSpans"
                       key={item.id}
                       onClick={() => {
                         handleSubmit(item.title);
@@ -307,10 +372,12 @@ export default function Navbar() {
             }}
           >
             <input
+              className="navbarinput"
               type="search"
               placeholder="Поиск"
               onChange={handleFilter}
               value={inpValue}
+              onKeyPress={(e) => e.key === "Enter" && handleClick()}
             />
             <img
               className="searchloopdes"
@@ -402,7 +469,7 @@ export default function Navbar() {
             </span>
           </Link>
         </Toolbar>
-        <FloatMenu />
+        {showFloat ? <FloatMenu /> : null}
       </AppBar>
     </Box>
   );

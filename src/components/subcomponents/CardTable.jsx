@@ -49,7 +49,12 @@ const CardTable = ({ item }) => {
             }}
           >
             <SwiperSlide style={{ position: "relative" }}>
-              <img width="262px" height="373px" src={item.image[0]} alt="" />
+              <img
+                width="262px"
+                height="373px"
+                src={item.image[currentPhoto]}
+                alt=""
+              />
               <div className="thover-line tline1"></div>
             </SwiperSlide>
             <SwiperSlide>

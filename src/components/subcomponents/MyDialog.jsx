@@ -12,13 +12,27 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const useStyles = makeStyles(() => ({
-  paper: { maxWidth: "590px" },
+  paper: { width: "390px" },
 }));
 
-const MyDialog = ({ open, handleClose }) => {
+const MyDialog = ({ open, setOpen }) => {
   const [inpValues, setInpValues] = useState({ title: "", phone: "" });
   const [secondPart, setSecondPart] = useState(false);
   const classes = useStyles();
+  const [error, setError] = useState(true);
+
+  useEffect(() => {
+    let regex = /^[0]\d{9}$/;
+    if (
+      inpValues.title === "" ||
+      inpValues.phone === "" ||
+      !regex.test(inpValues.phone)
+    ) {
+      setError(false);
+    } else {
+      setError(true);
+    }
+  }, [inpValues]);
 
   const handleChange = (e) => {
     let obj = {
@@ -29,15 +43,12 @@ const MyDialog = ({ open, handleClose }) => {
   };
 
   const handleSubmit = (obj) => {
-    let regex = /^[0]\d{9}$/;
-    if (obj.title == "" || obj.phone == "") {
-      alert("Пожалуйста заполните поля!");
-    } else if (regex.test(obj.phone)) {
-      setSecondPart(true);
-      setInpValues({ title: "", phone: "" });
-    } else {
-      alert("Неверный номер!");
-    }
+    setSecondPart(true);
+    setInpValues({ title: "", phone: "" });
+  };
+
+  const handleCloseMyDialog = () => {
+    setOpen(false);
   };
   return (
     <Dialog
@@ -45,7 +56,7 @@ const MyDialog = ({ open, handleClose }) => {
       open={open}
       TransitionComponent={Transition}
       keepMounted
-      onClose={handleClose}
+      onClose={handleCloseMyDialog}
       aria-describedby="alert-dialog-slide-description"
     >
       {secondPart ? (
@@ -63,7 +74,7 @@ const MyDialog = ({ open, handleClose }) => {
               cursor: "pointer",
             }}
             onClick={() => {
-              handleClose();
+              handleCloseMyDialog();
               setSecondPart(false);
             }}
           >
@@ -73,14 +84,9 @@ const MyDialog = ({ open, handleClose }) => {
       ) : (
         <div className="float-menu-container">
           <img
-            style={{
-              position: "absolute",
-              left: "92%",
-              top: "5%",
-              cursor: "pointer",
-            }}
+            className="closeMyDialog"
             src={CloseIcon}
-            onClick={handleClose}
+            onClick={handleCloseMyDialog}
             alt=""
           />
           <span className="float-menu-headerText">
@@ -96,7 +102,7 @@ const MyDialog = ({ open, handleClose }) => {
               alt=""
             />
             <input
-              id="float-input1"
+              className="float-input1"
               type="search"
               name="title"
               placeholder="Как вам обращаться?"
@@ -111,27 +117,32 @@ const MyDialog = ({ open, handleClose }) => {
               alt=""
             />
             <input
-              id="float-input1"
-              type="search"
+              className="float-input1"
+              type="number"
               name="phone"
               placeholder="Номер телефона"
               value={inpValues.phone}
               onChange={(e) => handleChange(e)}
             />
           </form>
-          <button
-            className="zakazat-btn"
-            style={
-              inpValues.phone !== ""
-                ? { backgroundColor: "#1D1D1B", cursor: "pointer" }
-                : { backgroundColor: "rgb(121, 118, 118)" }
-            }
-            onClick={() => {
-              handleSubmit(inpValues);
-            }}
-          >
-            Заказать звонок
-          </button>
+          {error ? (
+            <button
+              className="zakazat-btn"
+              style={{ backgroundColor: "#1D1D1B", cursor: "pointer" }}
+              onClick={() => {
+                handleSubmit(inpValues);
+              }}
+            >
+              Заказать звонок
+            </button>
+          ) : (
+            <button
+              className="zakazat-btn"
+              style={{ backgroundColor: "rgb(121, 118, 118)" }}
+            >
+              Заказать звонок
+            </button>
+          )}
         </div>
       )}
     </Dialog>

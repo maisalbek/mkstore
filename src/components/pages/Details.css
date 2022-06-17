@@ -70,7 +70,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-bottom: 21px;
+  /* margin-bottom: 21px; */
 }
 .itemsfourparent {
   display: grid;
@@ -93,10 +93,16 @@
   width: 308px;
   height: 440px;
 }
+#detailimg:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 .btn-container {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 25px;
 }
 #dtitle {
   margin-bottom: 20px;
@@ -280,6 +286,22 @@
   flex: none;
   color: "white";
   flex-grow: 0;
+}
+#color > div {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  opacity: 0.47;
+}
+#colordot:hover,
+#colordot:focus {
+  outline: 4px solid #ccc;
+  background-color: #999;
 }
 @media all and (max-width: 1389px) {
   .detailimg {

@@ -93,6 +93,7 @@ const CollectionPage = () => {
             <span style={{ fontWeight: "500" }}>Главная</span>
           </Link>
           <span style={{ margin: "0 12px" }}>/</span>
+
           <span style={{ fontWeight: "500", color: "#979797" }}>Коллекции</span>
         </span>
       </div>

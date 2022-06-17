@@ -21,8 +21,32 @@
 body {
   /* background-color: #ececec; */
   background-color: #f2f2f2;
+  font-family: "Montserrat" !important;
 }
 
+/*  --------------------------------in details ---------------------------------------- */
+#dcolor > div {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  opacity: 0.47;
+}
+#colordot:hover,
+#colordot:focus {
+  outline: 4px solid #ccc;
+  background-color: #999;
+}
+
+#colordot {
+  outline: 4px solid #ccc;
+  background-color: #999;
+}
+/*  --------------------------------in card ---------------------------------------- */
 #colordots {
   width: 8px;
   height: 8px;
@@ -34,6 +58,17 @@ body {
   cursor: pointer;
   opacity: 0.47;
 }
+
+#colordots:hover,
+#colordots:focus {
+  outline: 4px solid #ccc;
+  background-color: #999;
+}
+.dotsactive {
+  outline: 4px solid #ccc;
+  background-color: #999;
+}
+/*  --------------------------------in cart ---------------------------------------- */
 .colordots {
   width: 8px;
   height: 8px;
@@ -45,15 +80,20 @@ body {
   cursor: pointer;
   opacity: 0.47;
 }
-#colordots:hover,
-#colordots:focus {
-  outline: 4px solid #ccc;
-  background-color: #999;
-}
-.dotsactive {
-  outline: 4px solid #ccc;
-  background-color: #999;
-}
 input {
   outline: none;
+}
+.MuiTableContainer-root::-webkit-scrollbar {
+  display: none !important;
+}
+.registerbtn:hover {
+  background-color: #1d1d1d !important;
+}
+.forgotPassword {
+  /* width: 50% !important; */
+  color: #6338d9;
+  cursor: pointer;
+}
+.MuiFormControlLabel-label {
+  font-family: "Montserrat" !important;
 }
