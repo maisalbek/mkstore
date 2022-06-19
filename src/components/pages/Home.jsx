@@ -22,9 +22,9 @@ import Slider from "../subcomponents/Slider";
 import MySkeleton from "../subcomponents/MySkeleton";
 import HomeBlocks from "../subcomponents/HomeBlocks";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContextProvider";
 
 const Home = () => {
-  const navigate = useNavigate();
   const [sliderData, setSliderData] = useState({});
   const [products, setProducts] = useState([]);
   const [novinki, setNovinki] = useState([]);
@@ -38,6 +38,7 @@ const Home = () => {
   const [collectionbtn, setCollectionbtn] = useState(true);
   const advantageImages = [money, truck, support, shop];
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -57,6 +58,11 @@ const Home = () => {
   }, [screenWidth]);
 
   useEffect(() => {
+    // let fav = {
+    //   products: [],
+    // };
+    // localStorage.setItem("fav", JSON.stringify(fav));
+
     getProducts();
   }, [hitLimit]);
   useEffect(() => {

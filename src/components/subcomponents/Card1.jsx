@@ -6,6 +6,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { useNavigate } from "react-router-dom";
 import { useFavorite } from "../context/FavoriteContextProvider";
+import { useAuth } from "../context/AuthContextProvider";
 
 const Card1 = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -13,6 +14,7 @@ const Card1 = ({ item }) => {
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
   const [isActive, setIsActive] = useState({});
   const [showLike, setShowLike] = useState(false);
+  const { currentUser } = useAuth();
 
   const navigate = useNavigate();
 
@@ -48,15 +50,27 @@ const Card1 = ({ item }) => {
             alt=""
           />
           {inFav ? (
-            <img
-              src={heart}
-              alt=""
-              className="likeIcon"
-              onClick={() => {
-                addDelToFav(item);
-                setInFav(isProdInFav(item.id));
-              }}
-            />
+            currentUser.isLogged ? (
+              <img
+                src={heart}
+                alt=""
+                className="likeIcon"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            ) : showLike ? (
+              <img
+                src={emptyheart}
+                alt=""
+                className="likeIcon emptyheart"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            ) : null
           ) : showLike ? (
             <img
               src={emptyheart}

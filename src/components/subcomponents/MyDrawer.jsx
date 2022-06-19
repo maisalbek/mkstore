@@ -137,12 +137,21 @@ const MyDrawer = ({
             onClick={() => toggleDrawer("left", false)}
           >
             {inFav ? (
-              <img
-                width="23px"
-                src={FavoriteIconbadge}
-                alt=""
-                style={{ marginRight: "10px" }}
-              />
+              currentUser.isLogged ? (
+                <img
+                  width="23px"
+                  src={FavoriteIconbadge}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              ) : (
+                <img
+                  width="23px"
+                  src={FavoriteIcon}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              )
             ) : (
               <img
                 width="23px"
@@ -166,12 +175,21 @@ const MyDrawer = ({
             onClick={() => toggleDrawer("left", false)}
           >
             {inCart ? (
-              <img
-                width="23px"
-                src={ShoppingBagbad}
-                alt=""
-                style={{ marginRight: "10px" }}
-              />
+              currentUser.isLogged ? (
+                <img
+                  width="23px"
+                  src={ShoppingBagbad}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              ) : (
+                <img
+                  width="23px"
+                  src={ShoppingBag}
+                  alt=""
+                  style={{ marginRight: "10px" }}
+                />
+              )
             ) : (
               <img
                 width="23px"

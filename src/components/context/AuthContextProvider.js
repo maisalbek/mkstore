@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import axios from "axios";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -7,7 +8,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../../Firebase";
-import { ADMIN_EMAIL } from "../constants/Constants";
+import { ADMIN_EMAIL, API11 } from "../constants/Constants";
 import { notify } from "../Toastify/Toastify";
 import { useNavigate } from "react-router-dom";
 const authContext = createContext();
@@ -19,9 +20,36 @@ const AuthContextProvider = ({ children }) => {
     user: null,
     isAdmin: false,
     isLogged: false,
+    fav: {},
+    cart: {},
   });
 
   const navigate = useNavigate();
+
+  function createFavFromLS() {
+    let fav = JSON.parse(localStorage.getItem("fav"));
+    if (!fav) {
+      fav = {
+        products: [],
+      };
+      localStorage.setItem("fav", JSON.stringify(fav));
+    }
+    return fav;
+  }
+
+  function createCartFromLS() {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart) {
+      cart = {
+        products: [],
+        totalCount: 0,
+        totalOldPrice: 0,
+        totalCurrentPrice: 0,
+      };
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    return cart;
+  }
 
   const registerUser = async (email, password) => {
     try {
@@ -34,7 +62,15 @@ const AuthContextProvider = ({ children }) => {
         user: user.email,
         isAdmin: user.email === ADMIN_EMAIL ? true : false,
         isLogged: true,
+        fav: {},
+        cart: {},
       };
+      let news = {
+        user: user.email,
+        fav: {},
+        cart: {},
+      };
+      axios.post(API11, news);
       setCurrentUser(newUser);
       localStorage.setItem("currentUser", JSON.stringify(newUser));
       notify("success", "Регистрация прошла успешно!");
@@ -59,6 +95,30 @@ const AuthContextProvider = ({ children }) => {
   const logOutUser = async () => {
     try {
       await signOut(auth);
+      axios.get(API11).then((res) => {
+        let cUser = res.data.filter((item) => {
+          return item.user === currentUser.user;
+        });
+        let fav = createFavFromLS();
+        cUser[0].fav = fav;
+        axios.patch(`${API11}/${cUser[0].id}`, cUser[0]);
+        let cart = createCartFromLS();
+        cUser[0].cart = cart;
+        axios.patch(`${API11}/${cUser[0].id}`, cUser[0]);
+      });
+      setTimeout(() => {
+        let fav = {
+          products: [],
+        };
+        localStorage.setItem("fav", JSON.stringify(fav));
+        let cart = {
+          products: [],
+          totalCount: 0,
+          totalOldPrice: 0,
+          totalCurrentPrice: 0,
+        };
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }, 1000);
       let noUser = {
         user: null,
         isAdmin: false,
@@ -80,6 +140,17 @@ const AuthContextProvider = ({ children }) => {
         isAdmin: user.email === ADMIN_EMAIL ? true : false,
         isLogged: true,
       };
+      axios.get(API11).then((res) => {
+        let cUser = res.data.filter((item) => {
+          return item.user === user.email;
+        });
+        let fav = createFavFromLS();
+        fav = cUser[0].fav;
+        localStorage.setItem("fav", JSON.stringify(fav));
+        let cart = createCartFromLS();
+        cart = cUser[0].cart;
+        localStorage.setItem("cart", JSON.stringify(cart));
+      });
       setCurrentUser(newUser);
       localStorage.setItem("currentUser", JSON.stringify(newUser));
       notify("success", "Welcome!");
@@ -108,6 +179,8 @@ const AuthContextProvider = ({ children }) => {
           user: user.email,
           isAdmin: user.email === ADMIN_EMAIL ? true : false,
           isLogged: true,
+          fav: {},
+          cart: {},
         });
       }
     });

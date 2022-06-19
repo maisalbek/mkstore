@@ -5,11 +5,13 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContextProvider";
 const TableCardNovinki = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const { addDelToFav, isProdInFav, getFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
   const [isActive, setIsActive] = useState({});
+  const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   const handleItemClick = (index) => {
@@ -37,15 +39,27 @@ const TableCardNovinki = ({ item }) => {
             alt=""
           />
           {inFav ? (
-            <img
-              src={heart}
-              alt=""
-              className="collectionlikeIcon"
-              onClick={() => {
-                addDelToFav(item);
-                setInFav(isProdInFav(item.id));
-              }}
-            />
+            currentUser.isLogged ? (
+              <img
+                src={heart}
+                alt=""
+                className="collectionlikeIcon"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            ) : (
+              <img
+                src={emptyheart}
+                alt=""
+                className="collectionlikeIcon"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            )
           ) : (
             <img
               src={emptyheart}

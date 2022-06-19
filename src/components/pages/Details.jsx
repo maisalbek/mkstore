@@ -21,15 +21,16 @@ import CardTabledet from "../subcomponents/CardTabledet";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import heart from "../images/whiteheart.svg";
 import { useCart } from "../context/CartContextProvider";
+import { useAuth } from "../context/AuthContextProvider";
 
 const Details = () => {
   const [novinkiData, setNovinkiData] = useState([]);
   const [prodData, setProdData] = useState({});
   const { typeCollection } = useProductContext();
-  const [transform, setTransform] = useState(5);
   const { addDelToFav, getFav, fav, isProdInFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(prodData.id));
   const { prodId } = useParams();
+  const { currentUser } = useAuth();
   const { addDelToCart, getCart, cart, isProdInCart } = useCart();
   const navigate = useNavigate();
 
@@ -59,6 +60,12 @@ const Details = () => {
       setInFav(isProdInFav(res.data.id));
     });
   }, []);
+  useEffect(() => {
+    axios.get(`${API}/${prodId}`).then((res) => {
+      setProdData(res.data);
+      setInFav(isProdInFav(res.data.id));
+    });
+  }, [prodId]);
   useEffect(() => {
     axios.get(API).then((res) => {
       let newArr = res.data.filter(
@@ -214,24 +221,46 @@ const Details = () => {
 
           <div className="btn-container">
             {inCart ? (
-              <div
-                style={{
-                  width: "100%",
-                  backgroundColor: "black",
-                  height: "44px",
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                }}
-                onClick={() => {
-                  navigate("/cart");
-                }}
-              >
-                <img src={shopIcon} alt="" style={{ marginRight: "10px" }} />
-                Перейти в корзину
-              </div>
+              currentUser.isLogged ? (
+                <div
+                  style={{
+                    width: "100%",
+                    backgroundColor: "black",
+                    height: "44px",
+                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    navigate("/cart");
+                  }}
+                >
+                  <img src={shopIcon} alt="" style={{ marginRight: "10px" }} />
+                  Перейти в корзину
+                </div>
+              ) : (
+                <div
+                  style={{
+                    width: "100%",
+                    backgroundColor: "black",
+                    height: "44px",
+                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    addDelToCart(prodData);
+                    setInCart(isProdInCart(prodData.id, prodData.color));
+                  }}
+                >
+                  <img src={shopIcon} alt="" style={{ marginRight: "10px" }} />
+                  Добавить в корзину
+                </div>
+              )
             ) : (
               <div
                 style={{
@@ -271,39 +300,33 @@ const Details = () => {
               }}
             >
               {inFav ? (
-                <img src={heart} alt="" />
+                currentUser.isLogged ? (
+                  <img src={heart} alt="" />
+                ) : (
+                  <img src={heartIcon} alt="" />
+                )
               ) : (
                 <img src={heartIcon} alt="" />
               )}
             </div>
           </div>
-          {/* <div style={{ display: "flex", alignItems: "center" }}>
-            <div className="addbtn">
-              <img src={shopIcon} alt="" style={{ marginRight: "10px" }} />
-              Добавить в корзину
-            </div>
-            <div className="addbtnlike">
-              <img src={heartIcon} alt="" />
-            </div>
-          </div> */}
         </div>
       </div>
 
       <div className="detailsOuter-container">
         <div className="details-container">
           {prodData.image && prodData.image.length > 0 ? (
-            prodData.image.slice(0, 4).map((item, index) => (
-              <img
-                id="detailimg"
-                className="detailimg"
-                key={index}
-                src={item}
-                alt=""
-                onClick={() => {
-                  setTransform(index);
-                }}
-              />
-            ))
+            prodData.image
+              .slice(0, 4)
+              .map((item, index) => (
+                <img
+                  id="detailimg"
+                  className="detailimg"
+                  key={index}
+                  src={item}
+                  alt=""
+                />
+              ))
           ) : (
             <MySkeleton />
           )}
@@ -400,24 +423,46 @@ const Details = () => {
 
           <div className="btn-container">
             {inCart ? (
-              <div
-                style={{
-                  width: "100%",
-                  backgroundColor: "black",
-                  height: "44px",
-                  color: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                }}
-                onClick={() => {
-                  navigate("/cart");
-                }}
-              >
-                <img src={shopIcon} alt="" style={{ marginRight: "10px" }} />
-                Перейти в корзину
-              </div>
+              currentUser.isLogged ? (
+                <div
+                  style={{
+                    width: "100%",
+                    backgroundColor: "black",
+                    height: "44px",
+                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    navigate("/cart");
+                  }}
+                >
+                  <img src={shopIcon} alt="" style={{ marginRight: "10px" }} />
+                  Перейти в корзину
+                </div>
+              ) : (
+                <div
+                  style={{
+                    width: "100%",
+                    backgroundColor: "black",
+                    height: "44px",
+                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    addDelToCart(prodData);
+                    setInCart(isProdInCart(prodData.id, prodData.color));
+                  }}
+                >
+                  <img src={shopIcon} alt="" style={{ marginRight: "10px" }} />
+                  Добавить в корзину
+                </div>
+              )
             ) : (
               <div
                 style={{
@@ -457,7 +502,11 @@ const Details = () => {
               }}
             >
               {inFav ? (
-                <img src={heart} alt="" />
+                currentUser.isLogged ? (
+                  <img src={heart} alt="" />
+                ) : (
+                  <img src={heartIcon} alt="" />
+                )
               ) : (
                 <img src={heartIcon} alt="" />
               )}

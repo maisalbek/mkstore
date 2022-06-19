@@ -5,6 +5,7 @@ import emptyheart from "../images/emptyhearticon.svg";
 import heart from "../images/hearticon.svg";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContextProvider";
 
 const CardNovinki = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -12,6 +13,7 @@ const CardNovinki = ({ item }) => {
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
   const [isActive, setIsActive] = useState({});
   const [showLike, setShowLike] = useState(false);
+  const { currentUser } = useAuth();
 
   const navigate = useNavigate();
 
@@ -52,15 +54,29 @@ const CardNovinki = ({ item }) => {
             style={{ cursor: "pointer" }}
           />
           {inFav ? (
-            <img
-              src={heart}
-              alt=""
-              className="collectionlikeIcon"
-              onClick={() => {
-                addDelToFav(item);
-                setInFav(isProdInFav(item.id));
-              }}
-            />
+            currentUser.isLogged ? (
+              <img
+                src={heart}
+                alt=""
+                className="collectionlikeIcon"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            ) : (
+              showLike && (
+                <img
+                  src={emptyheart}
+                  alt=""
+                  className="collectionlikeIcon emptycol"
+                  onClick={() => {
+                    addDelToFav(item);
+                    setInFav(isProdInFav(item.id));
+                  }}
+                />
+              )
+            )
           ) : (
             showLike && (
               <img

@@ -35,6 +35,7 @@ const AccountMenu = ({ anchorEl, handleClose }) => {
         className={classes.customWidth}
       >
         <MenuItem
+          sx={{ width: "200px" }}
           onClick={() => {
             handleClose();
             logOutUser();

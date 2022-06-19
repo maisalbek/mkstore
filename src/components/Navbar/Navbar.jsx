@@ -77,12 +77,15 @@ export default function Navbar() {
     axios.get(API2).then((response) => {
       setHeaderInfo(response.data);
     });
-    getFav();
     getCart();
   }, []);
 
   useEffect(() => {
-    fav.products && fav.products.length > 0 ? setInFav(true) : setInFav(false);
+    if (fav.products) {
+      fav.products && fav.products.length > 0
+        ? setInFav(true)
+        : setInFav(false);
+    }
   }, [fav.products]);
   useEffect(() => {
     cart.products && cart.products.length > 0
@@ -336,7 +339,7 @@ export default function Navbar() {
                       className="hintSpans"
                       key={item.id}
                       onClick={() => {
-                        handleSubmit(item.title);
+                        navigate(`/detail/${item.id}`);
                       }}
                     >
                       {item.title}
@@ -394,7 +397,7 @@ export default function Navbar() {
                           className="searchhints"
                           key={item.id}
                           onClick={() => {
-                            handleSubmit(item.title);
+                            navigate(`/detail/${item.id}`);
                           }}
                         >
                           {item.title}
@@ -418,12 +421,21 @@ export default function Navbar() {
               }}
             >
               {inFav ? (
-                <img
-                  width="23px"
-                  src={FavoriteIconbadge}
-                  alt=""
-                  style={{ marginRight: "10px" }}
-                />
+                currentUser.isLogged ? (
+                  <img
+                    width="23px"
+                    src={FavoriteIconbadge}
+                    alt=""
+                    style={{ marginRight: "10px" }}
+                  />
+                ) : (
+                  <img
+                    width="23px"
+                    src={FavoriteIcon}
+                    alt=""
+                    style={{ marginRight: "10px" }}
+                  />
+                )
               ) : (
                 <img
                   width="23px"
@@ -451,12 +463,21 @@ export default function Navbar() {
               }}
             >
               {inCart ? (
-                <img
-                  width="23px"
-                  src={ShoppingBagbad}
-                  alt=""
-                  style={{ marginRight: "10px" }}
-                />
+                currentUser.isLogged ? (
+                  <img
+                    width="23px"
+                    src={ShoppingBagbad}
+                    alt=""
+                    style={{ marginRight: "10px" }}
+                  />
+                ) : (
+                  <img
+                    width="23px"
+                    src={ShoppingBag}
+                    alt=""
+                    style={{ marginRight: "10px" }}
+                  />
+                )
               ) : (
                 <img
                   width="23px"

@@ -7,12 +7,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useFavorite } from "../context/FavoriteContextProvider";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContextProvider";
 
 const CardTable = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const { addDelToFav, isProdInFav, getFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
   const [isActive, setIsActive] = useState({});
+  const { currentUser } = useAuth();
   const handleItemClick = (index) => {
     setIsActive({ activeItem: index });
   };
@@ -33,15 +35,6 @@ const CardTable = ({ item }) => {
         }}
       >
         <div className="cardTable-image-container">
-          {/* <img
-            width="262px"
-            height="373px"
-            src={item.image[currentPhoto]}
-            onClick={() => {
-              navigate(`/detail/${item.id}`);
-            }}
-            alt=""
-          /> */}
           <Swiper
             className="mySwiper"
             onClick={() => {
@@ -71,15 +64,27 @@ const CardTable = ({ item }) => {
             </SwiperSlide>
           </Swiper>
           {inFav ? (
-            <img
-              src={heart}
-              alt=""
-              className="likeIcon"
-              onClick={() => {
-                addDelToFav(item);
-                setInFav(isProdInFav(item.id));
-              }}
-            />
+            currentUser.isLogged ? (
+              <img
+                src={heart}
+                alt=""
+                className="likeIcon"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            ) : (
+              <img
+                src={emptyheart}
+                alt=""
+                className="likeIcon"
+                onClick={() => {
+                  addDelToFav(item);
+                  setInFav(isProdInFav(item.id));
+                }}
+              />
+            )
           ) : (
             <img
               src={emptyheart}

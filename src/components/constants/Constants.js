@@ -9,6 +9,7 @@ export const API7 = "http://localhost:8001/news"; //news
 export const API8 = "http://localhost:8001/help"; //help
 export const API9 = "http://localhost:8001/orderData"; //orderData
 export const API10 = "http://localhost:8001/publicOffer"; //publicOffer
+export const API11 = "http://localhost:8001/users"; //users
 
 export const ADMIN_EMAIL = "admin-zeon@gmail.com";
 
