@@ -7,7 +7,6 @@ export const API5 = "http://localhost:8001/collection"; //collection
 export const API6 = "http://localhost:8001/about"; //about
 export const API7 = "http://localhost:8001/news"; //news
 export const API8 = "http://localhost:8001/help"; //help
-export const API9 = "http://localhost:8001/orderData"; //orderData
 export const API10 = "http://localhost:8001/publicOffer"; //publicOffer
 export const API11 = "http://localhost:8001/users"; //users
 
@@ -38,6 +37,13 @@ export const calcTotalCurrentprice = (arr) => {
   let total = 0;
   arr.forEach((item) => {
     total += item.currentSubPrice;
+  });
+  return total;
+};
+export const calcTotalColors = (arr) => {
+  let total = [];
+  arr.forEach((item) => {
+    total.push(item.color);
   });
   return total;
 };

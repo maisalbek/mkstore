@@ -8,8 +8,9 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { API } from "../constants/Constants";
+import { useAuth } from "../context/AuthContextProvider";
 import { useCart } from "../context/CartContextProvider";
 import CardNovinki from "../subcomponents/CardNovinki";
 import CartCard from "../subcomponents/CartCard";
@@ -20,11 +21,13 @@ import TableCardNovinki from "../subcomponents/TableCardNovinki";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cart, getCart, cartLength } = useCart();
+  const { cart, getCart, getHistory } = useCart();
   const [hide, setHide] = useState(false);
   const [novinkiData, setNovinkiData] = useState([]);
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   const handleClose = () => {
     setOpen(false);
@@ -47,6 +50,7 @@ const Cart = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     getCart();
+    getHistory();
   }, []);
 
   useEffect(() => {
@@ -68,6 +72,21 @@ const Cart = () => {
           </Link>
           <span style={{ margin: "0 12px" }}>/</span>
           <span className="breadcrumbs third">Корзина</span>
+        </span>
+        <span
+          className="breadcrumbs"
+          style={{
+            margin: "22px 0",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            marginTop: "23px",
+          }}
+          onClick={() => {
+            currentUser.isLogged && navigate("/orderhistory");
+          }}
+        >
+          История заказов
         </span>
       </div>
       {cart.products && cart.products.length <= 0 ? (
@@ -125,8 +144,8 @@ const Cart = () => {
       <div className="cart-container">
         <div className="elems">
           {cart.products && cart.products.length > 0
-            ? cart.products.map((item1) => (
-                <CartCard key={item1.item.id} item1={item1} />
+            ? cart.products.map((item1, index) => (
+                <CartCard key={index} item1={item1} />
               ))
             : null}
         </div>
@@ -395,10 +414,10 @@ const Cart = () => {
         )}
       </div>
       <div className="desktopver">
-        <OrderDialog handleClose={handleClose} open={open} />
+        <OrderDialog handleClose={handleClose} open={open} cart={cart} />
       </div>
       <div className="mobilever">
-        <OrderDialogMob handleClose={handleClose2} open={open2} />
+        <OrderDialogMob handleClose={handleClose2} open={open2} cart={cart} />
       </div>
     </div>
   );

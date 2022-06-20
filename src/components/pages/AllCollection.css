@@ -2,6 +2,7 @@
   display: flex;
   background-color: #ffffff;
   padding: 0 99px;
+  justify-content: space-between;
 }
 .allcollection-container {
   padding: 0 99px;

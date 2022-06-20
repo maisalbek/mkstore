@@ -91,6 +91,15 @@
   border: 1px solid #efefef;
   border-radius: 6px;
 }
+@media all and (max-width: 330px) {
+  .addsub {
+    width: 25px;
+    height: 25px;
+  }
+  .cprice {
+    margin-bottom: 6px;
+  }
+}
 .count {
   width: 32px;
   height: 32px;

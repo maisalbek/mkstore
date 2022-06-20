@@ -22,6 +22,7 @@ const AuthContextProvider = ({ children }) => {
     isLogged: false,
     fav: {},
     cart: {},
+    orderHistory: [],
   });
 
   const navigate = useNavigate();
@@ -69,6 +70,7 @@ const AuthContextProvider = ({ children }) => {
         user: user.email,
         fav: {},
         cart: {},
+        orderHistory: [],
       };
       axios.post(API11, news);
       setCurrentUser(newUser);
@@ -116,6 +118,7 @@ const AuthContextProvider = ({ children }) => {
           totalCount: 0,
           totalOldPrice: 0,
           totalCurrentPrice: 0,
+          totalcolors: [],
         };
         localStorage.setItem("cart", JSON.stringify(cart));
       }, 1000);
@@ -127,6 +130,7 @@ const AuthContextProvider = ({ children }) => {
       setCurrentUser(noUser);
       localStorage.setItem("currentUser", JSON.stringify(noUser));
       notify("warning", "Пользователь вышел из сети!");
+      navigate("/");
     } catch (err) {
       console.log(err);
     }

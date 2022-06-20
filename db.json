@@ -11,122 +11,36 @@
         "totalOldPrice": 0,
         "totalCurrentPrice": 0
       },
+      "orderHistory": [],
       "id": 2
     },
     {
       "user": "test2@gmail.com",
       "fav": {
-        "products": [
-          {
-            "item": {
-              "id": 3,
-              "image": [
-                "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
-                "https://raslov.ua/wp-content/uploads/2020/10/img_8823.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "orange",
-              "title": "Платье из кожи",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "зима",
-              "type": "novinka"
-            }
-          }
-        ]
+        "products": []
       },
       "cart": {
+        "products": [],
+        "totalCount": 0,
+        "totalOldPrice": 0,
+        "totalCurrentPrice": 0
+      },
+      "orderHistory": [],
+      "id": 3
+    },
+    {
+      "user": "test3@gmail.com",
+      "fav": {
         "products": [
           {
             "item": {
-              "id": 7,
+              "id": 4,
               "image": [
+                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
                 "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
                 "https://raslov.ua/wp-content/uploads/2020/10/img_8823.jpg",
-                "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "orange",
-              "title": "Puma",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "Для дома",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 7,
-            "color": "orange",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 2730
-          },
-          {
-            "item": {
-              "id": 7,
-              "image": [
-                "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
                 "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://raslov.ua/wp-content/uploads/2020/10/img_8823.jpg",
-                "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "red",
-              "title": "Puma",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "Для дома",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 7,
-            "color": "red",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 2730
-          },
-          {
-            "item": {
-              "id": 7,
-              "image": [
-                "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://raslov.ua/wp-content/uploads/2020/10/img_8823.jpg",
-                "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
+                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
               ],
               "colors": [
                 "red",
@@ -136,208 +50,43 @@
                 "green"
               ],
               "color": "blue",
-              "title": "Puma",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "Для дома",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 7,
-            "color": "blue",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 2730
-          },
-          {
-            "item": {
-              "id": 7,
-              "image": [
-                "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://raslov.ua/wp-content/uploads/2020/10/img_8823.jpg",
-                "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "black",
-              "title": "Puma",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "Для дома",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 7,
-            "color": "black",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 2730
-          },
-          {
-            "item": {
-              "id": 7,
-              "image": [
-                "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://raslov.ua/wp-content/uploads/2020/10/img_8823.jpg",
-                "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "green",
-              "title": "Puma",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "Для дома",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 7,
-            "color": "green",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 2730
-          }
-        ],
-        "totalCount": 5,
-        "totalOldPrice": 13650,
-        "totalCurrentPrice": 6825
-      },
-      "id": 3
-    },
-    {
-      "user": "test3@gmail.com",
-      "fav": {
-        "products": [
-          {
-            "item": {
-              "id": 2,
-              "image": [
-                "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
-                "https://malinka-fashion.ru/images/products/4b/96/product_add_pic_50595.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
-                "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "red",
-              "title": "Платье",
+              "title": "Повседневное платье",
               "price": 1365,
               "article": "Платье PL984/dakota",
               "oldprice": 0,
               "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
               "material": "Полиэстер ",
               "textile": "волокна",
-              "collection": "осень",
+              "collection": "Для выезда на природу",
               "type": "novinka"
             }
           }
         ]
       },
       "cart": {
-        "products": [
-          {
-            "item": {
-              "id": 2,
-              "image": [
-                "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
-                "https://malinka-fashion.ru/images/products/4b/96/product_add_pic_50595.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg",
-                "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "red",
-              "title": "Платье",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 0,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "осень",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 2,
-            "color": "red",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 1365
-          },
-          {
-            "item": {
-              "id": 7,
-              "image": [
-                "https://images.wbstatic.net/big/new/4380000/4389985-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://raslov.ua/wp-content/uploads/2020/10/img_8823.jpg",
-                "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
-                "https://malinka-fashion.ru/images/products/47/4b/product_img_15649.jpg"
-              ],
-              "colors": [
-                "red",
-                "orange",
-                "blue",
-                "black",
-                "green"
-              ],
-              "color": "orange",
-              "title": "Puma",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "волокна",
-              "collection": "Для дома",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 7,
-            "color": "orange",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 2730
-          }
-        ],
-        "totalCount": 2,
-        "totalOldPrice": 4095,
-        "totalCurrentPrice": 2730
+        "products": [],
+        "totalCount": 0,
+        "totalOldPrice": 0,
+        "totalCurrentPrice": 0,
+        "totalcolors": []
       },
+      "orderHistory": [],
       "id": 4
+    },
+    {
+      "user": "test4@gmail.com",
+      "fav": {
+        "products": []
+      },
+      "cart": {
+        "products": [],
+        "totalCount": 0,
+        "totalOldPrice": 0,
+        "totalCurrentPrice": 0,
+        "totalcolors": []
+      },
+      "orderHistory": [],
+      "id": 5
     }
   ],
   "products": [
@@ -1540,18 +1289,6 @@
       "id": 7,
       "question": "Как я могу оставить заявку на обратную связь",
       "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. "
-    }
-  ],
-  "orderData": [
-    {
-      "name": "Maisalbek",
-      "surname": "Sir",
-      "email": "maysalbek1972@gmail.com",
-      "phone": "+9963421212",
-      "country": "Kyrgyzstan",
-      "city": "Bishkek",
-      "checked": true,
-      "id": 1
     }
   ],
   "publicOffer": {

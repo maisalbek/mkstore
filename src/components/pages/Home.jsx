@@ -58,11 +58,6 @@ const Home = () => {
   }, [screenWidth]);
 
   useEffect(() => {
-    // let fav = {
-    //   products: [],
-    // };
-    // localStorage.setItem("fav", JSON.stringify(fav));
-
     getProducts();
   }, [hitLimit]);
   useEffect(() => {

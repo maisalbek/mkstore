@@ -12,6 +12,7 @@ import Help from "./components/pages/Help";
 import Home from "./components/pages/Home";
 import LoginPage from "./components/pages/LoginPage";
 import News from "./components/pages/News";
+import OrderHistory from "./components/pages/OrderHistory";
 import Public from "./components/pages/Public";
 import RegistrationPage from "./components/pages/RegistrationPage";
 import SearchPage from "./components/pages/SearchPage";
@@ -33,6 +34,7 @@ const MyRoutes = () => {
         <Route path="/public" element={<Public />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/orderhistory" element={<OrderHistory />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

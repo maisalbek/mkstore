@@ -1,9 +1,10 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer, useState } from "react";
 import axios from "axios";
 import {
-  API9,
+  API11,
   calcCurrentSubPrice,
   calcOldSubPrice,
+  calcTotalColors,
   calcTotalCount,
   calcTotalCurrentprice,
   calcTotalOldPrice,
@@ -42,6 +43,7 @@ function reducer(state = INIT_STATE, action) {
 
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  const [history, setHistory] = useState([]);
   const { currentUser } = useAuth();
   const navigate = useNavigate();
   function createCartFromLS() {
@@ -52,6 +54,7 @@ const CartContextProvider = ({ children }) => {
         totalCount: 0,
         totalOldPrice: 0,
         totalCurrentPrice: 0,
+        totalcolors: [],
       };
       localStorage.setItem("cart", JSON.stringify(cart));
     }
@@ -90,6 +93,7 @@ const CartContextProvider = ({ children }) => {
       cart.totalCount = calcTotalCount(cart.products);
       cart.totalOldPrice = calcTotalOldPrice(cart.products);
       cart.totalCurrentPrice = calcTotalCurrentprice(cart.products);
+      cart.totalcolors = calcTotalColors(cart.products);
       localStorage.setItem("cart", JSON.stringify(cart));
       getCartLength();
       dispatch({
@@ -116,6 +120,7 @@ const CartContextProvider = ({ children }) => {
         cart.totalOldPrice = calcTotalOldPrice(cart.products);
         cart.totalCount = calcTotalCount(cart.products);
         cart.totalCurrentPrice = calcTotalCurrentprice(cart.products);
+        cart.totalcolors = calcTotalColors(cart.products);
         localStorage.setItem("cart", JSON.stringify(cart));
         getCart();
       }
@@ -174,7 +179,45 @@ const CartContextProvider = ({ children }) => {
   const sendOrderData = async (obj) => {
     if (currentUser.isLogged) {
       try {
-        await axios.post(API9, obj);
+        let res = await axios.get(API11);
+        let newArr = res.data.filter((item) => {
+          return item.user === currentUser.user;
+        });
+        newArr[0].orderHistory.push(obj);
+        axios.patch(`${API11}/${newArr[0].id}`, newArr[0]);
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      navigate("/login");
+    }
+  };
+
+  const getHistory = async () => {
+    if (currentUser.isLogged) {
+      try {
+        let res = await axios.get(API11);
+        let newArr = res.data.filter((item) => {
+          return item.user === currentUser.user;
+        });
+        setHistory(newArr[0].orderHistory);
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      navigate("/login");
+    }
+  };
+  const clearHistory = async (str) => {
+    if (currentUser.isLogged) {
+      try {
+        let res = await axios.get(API11);
+        let newArr = res.data.filter((item) => {
+          return item.user === str;
+        });
+        newArr[0].orderHistory = [];
+        axios.patch(`${API11}/${newArr[0].id}`, newArr[0]);
+        getHistory();
       } catch (err) {
         console.log(err);
       }
@@ -188,6 +231,8 @@ const CartContextProvider = ({ children }) => {
       value={{
         cartLength: state.cartLength,
         cart: state.cart,
+        history,
+        clearHistory,
         addDelToCart,
         sendOrderData,
         getCartLength,
@@ -196,6 +241,7 @@ const CartContextProvider = ({ children }) => {
         changeProductCount,
         deleteProdInCart,
         ClearCart,
+        getHistory,
       }}
     >
       {children}

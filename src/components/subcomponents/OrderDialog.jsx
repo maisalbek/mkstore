@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import SuccesDialog from "./SuccesDialog";
 import close from "../images/CloseIcon.svg";
 import { useCart } from "../context/CartContextProvider";
+import { useAuth } from "../context/AuthContextProvider";
 
 const INIT_VALUES = {
   name: "",
@@ -25,13 +26,14 @@ const useStyles = makeStyles(() => ({
   paper: { width: "440px", height: "670px" },
 }));
 
-const OrderDialog = ({ open, handleClose }) => {
+const OrderDialog = ({ open, handleClose, cart }) => {
   const [inpValues, setInpValues] = useState(INIT_VALUES);
   const [phone, setPhone] = useState("");
   const [isFilled, setIsFilled] = useState(false);
   const [phoneCheck, setPhoneCheck] = useState(true);
   const [emailCheck, setEmailCheck] = useState(true);
   const { sendOrderData } = useCart();
+  const { currentUser } = useAuth();
   const classes = useStyles();
 
   const [open2, setOpen2] = useState(false);
@@ -109,7 +111,32 @@ const OrderDialog = ({ open, handleClose }) => {
       regexPhone.test(inpValues.phone) === true &&
       regexEmail.test(inpValues.email) === true
     ) {
-      sendOrderData(inpValues);
+      let today = new Date();
+      let date =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate();
+      let time =
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      let obj = {
+        user: currentUser.user,
+        date: date,
+        time: time,
+        lineCount: cart.products && cart.totalCount,
+        productCount: cart.products && cart.totalCount * 5,
+        totalPrice: cart.totalOldPrice,
+        discount: cart.totalOldPrice
+          ? cart.totalOldPrice - cart.totalCurrentPrice
+          : 0,
+        toPay:
+          cart.totalOldPrice > 0
+            ? cart.totalOldPrice - (cart.totalOldPrice - cart.totalCurrentPrice)
+            : cart.totalOldPrice,
+        colors: cart.totalcolors,
+      };
+      sendOrderData(obj);
       handleClose();
       handleClickOpen2();
     }
