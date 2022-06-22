@@ -45,6 +45,8 @@ export default function Navbar() {
   const { currentUser, logOutUser } = useAuth();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = useState(false);
+  const [favData, setFavData] = useState([]);
+  const [cartData, setCartData] = useState([]);
 
   const navigate = useNavigate();
 
@@ -78,6 +80,27 @@ export default function Navbar() {
     });
     getCart();
   }, []);
+
+  useEffect(() => {
+    if (fav.products) {
+      setFavData(fav.products);
+    }
+  }, []);
+  useEffect(() => {
+    if (fav.products) {
+      setFavData(fav.products);
+    }
+  }, [fav.products]);
+  useEffect(() => {
+    if (cart.products) {
+      setCartData(cart.products);
+    }
+  }, []);
+  useEffect(() => {
+    if (cart.products) {
+      setCartData(cart.products);
+    }
+  }, [cart.products]);
 
   const handleFilter = (e) => {
     setInpValue(e.target.value);
@@ -386,7 +409,7 @@ export default function Navbar() {
                 marginLeft: "35px",
               }}
             >
-              {fav.products && fav.products.length > 0 ? (
+              {favData && favData.length > 0 ? (
                 currentUser.isLogged ? (
                   <img
                     width="23px"
@@ -428,7 +451,7 @@ export default function Navbar() {
                 borderLeft: "1px solid #e0e0e0",
               }}
             >
-              {cart.products && cart.products.length > 0 ? (
+              {cartData && cartData.length > 0 ? (
                 currentUser.isLogged ? (
                   <img
                     width="23px"
