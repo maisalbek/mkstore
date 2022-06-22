@@ -756,6 +756,9 @@ html {
   .float-menu-container {
     margin: 15px;
   }
+  .float-menu-container2 {
+    margin: 15px;
+  }
 }
 @media all and (max-width: 426px) {
   .novinki-text {

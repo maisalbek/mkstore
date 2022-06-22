@@ -12,7 +12,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const useStyles = makeStyles(() => ({
-  paper: { width: "350px", height: "290px" },
+  paper: {
+    width: window.innerWidth > "899px" ? "350px" : "280px",
+    height: "290px",
+  },
+  dialogPaper: { width: "295px" },
 }));
 
 const MyDialog = ({ open, setOpen }) => {
@@ -42,7 +46,7 @@ const MyDialog = ({ open, setOpen }) => {
     setInpValues(obj);
   };
 
-  const handleSubmit = (obj) => {
+  const handleSubmit = () => {
     setSecondPart(true);
     setInpValues({ title: "", phone: "" });
   };
@@ -52,7 +56,15 @@ const MyDialog = ({ open, setOpen }) => {
   };
   return (
     <Dialog
-      classes={secondPart ? { paper: classes.paper } : null}
+      classes={
+        secondPart
+          ? {
+              paper: classes.paper,
+            }
+          : window.innerWidth > "899px"
+          ? null
+          : { paper: classes.dialogPaper }
+      }
       open={open}
       TransitionComponent={Transition}
       keepMounted
@@ -65,7 +77,6 @@ const MyDialog = ({ open, setOpen }) => {
         textAlign: "center",
         padding: "0",
       }}
-      inputProps={{ MenuProps: { disableScrollLock: true } }}
     >
       {secondPart ? (
         <div className="float-menu-container float-menu-container2">
@@ -139,7 +150,7 @@ const MyDialog = ({ open, setOpen }) => {
               className="zakazat-btn"
               style={{ backgroundColor: "#1D1D1B", cursor: "pointer" }}
               onClick={() => {
-                handleSubmit(inpValues);
+                handleSubmit();
               }}
             >
               Заказать звонок
