@@ -92,6 +92,7 @@ const MyDialog = ({ open, setOpen }) => {
       ) : (
         <div className="float-menu-container">
           <img
+            style={{ width: "14px", height: "14px" }}
             className="closeMyDialog"
             src={CloseIcon}
             onClick={handleCloseMyDialog}
