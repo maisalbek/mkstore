@@ -15,7 +15,7 @@ import money from "../images/money 1.svg";
 import truck from "../images/truck 1.svg";
 import support from "../images/support 1.svg";
 import shop from "../images/shop-2 1.svg";
-import { API, API3 } from "../constants/Constants";
+import { API, API3, API5 } from "../constants/Constants";
 import { API4 } from "../constants/Constants";
 import axios from "axios";
 import Slider from "../subcomponents/Slider";
@@ -111,7 +111,7 @@ const Home = () => {
   };
   const getCollection = () => {
     if (screenWidth < 899) {
-      axios.get(`${API}${`?_limit=`}`).then((response) => {
+      axios.get(`${API5}${`?_limit=`}`).then((response) => {
         setCollectionData(response.data);
         if (Number.isInteger(response.data.length / 4)) {
           setCollectionbtn(true);
@@ -120,7 +120,7 @@ const Home = () => {
         }
       });
     } else {
-      axios.get(`${API}${`?_limit=${collectionLimit}`}`).then((response) => {
+      axios.get(`${API5}${`?_limit=${collectionLimit}`}`).then((response) => {
         setCollectionData(response.data);
         if (Number.isInteger(response.data.length / 4)) {
           setCollectionbtn(true);
