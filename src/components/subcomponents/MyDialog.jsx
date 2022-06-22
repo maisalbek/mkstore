@@ -59,6 +59,7 @@ const MyDialog = ({ open, setOpen }) => {
       onClose={handleCloseMyDialog}
       aria-describedby="alert-dialog-slide-description"
       sx={{ display: "flex", justifyContent: "center" }}
+      inputProps={{ MenuProps: { disableScrollLock: true } }}
     >
       {secondPart ? (
         <div className="float-menu-container float-menu-container2">
