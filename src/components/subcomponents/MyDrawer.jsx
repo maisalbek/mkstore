@@ -20,23 +20,14 @@ const MyDrawer = ({
   handleClickOpenMyDialog,
 }) => {
   const { fav, getFav } = useFavorite();
-  const [inFav, setInFav] = useState();
   const { cart, getCart } = useCart();
-  const [inCart, setInCart] = useState();
   const { currentUser, logOutUser } = useAuth();
 
   React.useEffect(() => {
     getFav();
     getCart();
   }, []);
-  React.useEffect(() => {
-    fav.products && fav.products.length > 0 ? setInFav(true) : setInFav(false);
-  }, [fav.products]);
-  React.useEffect(() => {
-    cart.products && cart.products.length > 0
-      ? setInCart(true)
-      : setInCart(false);
-  }, [cart.products]);
+
   return (
     <Drawer
       PaperProps={{
@@ -136,7 +127,7 @@ const MyDrawer = ({
             }}
             onClick={() => toggleDrawer("left", false)}
           >
-            {inFav ? (
+            {fav.products && fav.products.length > 0 ? (
               currentUser.isLogged ? (
                 <img
                   width="23px"
@@ -174,7 +165,7 @@ const MyDrawer = ({
             }}
             onClick={() => toggleDrawer("left", false)}
           >
-            {inCart ? (
+            {cart.products && cart.products.length > 0 ? (
               currentUser.isLogged ? (
                 <img
                   width="23px"

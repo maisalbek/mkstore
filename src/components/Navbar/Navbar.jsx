@@ -37,8 +37,6 @@ export default function Navbar() {
   const { fav, getFav } = useFavorite();
   const { ForSearch, getData, sendSearchData } = useSearchContext();
   const { cart, getCart } = useCart();
-  const [inFav, setInFav] = useState();
-  const [inCart, setInCart] = useState();
   const [filteredData, setFilteredData] = useState([]);
   const [close, setClose] = useState(false);
   const [inpValue, setInpValue] = useState("");
@@ -73,25 +71,13 @@ export default function Navbar() {
   }, [location.pathname]);
 
   useEffect(() => {
+    getFav();
     getData();
     axios.get(API2).then((response) => {
       setHeaderInfo(response.data);
     });
     getCart();
   }, []);
-
-  useEffect(() => {
-    if (fav.products) {
-      fav.products && fav.products.length > 0
-        ? setInFav(true)
-        : setInFav(false);
-    }
-  }, [fav.products]);
-  useEffect(() => {
-    cart.products && cart.products.length > 0
-      ? setInCart(true)
-      : setInCart(false);
-  }, [cart.products]);
 
   const handleFilter = (e) => {
     setInpValue(e.target.value);
@@ -114,26 +100,6 @@ export default function Navbar() {
   const handleClick = () => {
     if (inpValue) {
       sendSearchData(filteredData, inpValue);
-      setInpValue("");
-      setClose(false);
-      navigate("/search");
-    }
-  };
-
-  const handleSubmit = (str) => {
-    const newData = ForSearch.filter((elem) => {
-      if (str.trim().length > 0) {
-        if (elem.title.toLowerCase().includes(str.toLowerCase())) {
-          setClose(true);
-          return elem.title.toLowerCase().includes(str.toLowerCase());
-        }
-      } else if (str.trim().length === 0) {
-        setClose(false);
-      }
-    });
-    setFilteredData(newData);
-    if (str) {
-      sendSearchData(filteredData, str);
       setInpValue("");
       setClose(false);
       navigate("/search");
@@ -420,7 +386,7 @@ export default function Navbar() {
                 marginLeft: "35px",
               }}
             >
-              {inFav ? (
+              {fav.products && fav.products.length > 0 ? (
                 currentUser.isLogged ? (
                   <img
                     width="23px"
@@ -462,7 +428,7 @@ export default function Navbar() {
                 borderLeft: "1px solid #e0e0e0",
               }}
             >
-              {inCart ? (
+              {cart.products && cart.products.length > 0 ? (
                 currentUser.isLogged ? (
                   <img
                     width="23px"
