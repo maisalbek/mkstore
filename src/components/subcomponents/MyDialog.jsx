@@ -13,7 +13,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const useStyles = makeStyles(() => ({
   paper: {
-    width: window.innerWidth > "899px" ? "350px" : "280px",
+    width: window.innerWidth > 899 ? "350px" : "280px",
     height: "290px",
   },
   dialogPaper: { width: "295px" },
@@ -61,7 +61,7 @@ const MyDialog = ({ open, setOpen }) => {
           ? {
               paper: classes.paper,
             }
-          : window.innerWidth > "899px"
+          : window.innerWidth > 899
           ? null
           : { paper: classes.dialogPaper }
       }
