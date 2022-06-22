@@ -273,7 +273,7 @@ export default function Navbar() {
               handleClickOpenMyDialog={handleClickOpenMyDialog}
             />
             <MyDialog open={open} setOpen={setOpen} />
-            <Link to="/">
+            <Link to="/" style={{ marginRight: "30px" }}>
               <img
                 src={Logo}
                 alt=""
