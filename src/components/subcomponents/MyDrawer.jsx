@@ -127,7 +127,7 @@ const MyDrawer = ({
             }}
             onClick={() => toggleDrawer("left", false)}
           >
-            {fav.products && fav.products.length > 0 ? (
+            {fav?.products && fav?.products.length > 0 ? (
               currentUser.isLogged ? (
                 <img
                   width="23px"
@@ -165,7 +165,7 @@ const MyDrawer = ({
             }}
             onClick={() => toggleDrawer("left", false)}
           >
-            {cart.products && cart.products.length > 0 ? (
+            {cart?.products && cart?.products.length > 0 ? (
               currentUser.isLogged ? (
                 <img
                   width="23px"

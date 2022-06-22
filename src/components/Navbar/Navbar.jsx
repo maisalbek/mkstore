@@ -82,25 +82,25 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (fav.products) {
-      setFavData(fav.products);
+    if (fav?.products) {
+      setFavData(fav?.products);
     }
   }, []);
   useEffect(() => {
-    if (fav.products) {
-      setFavData(fav.products);
+    if (fav?.products) {
+      setFavData(fav?.products);
     }
-  }, [fav.products]);
+  }, [fav?.products]);
   useEffect(() => {
-    if (cart.products) {
-      setCartData(cart.products);
+    if (cart?.products) {
+      setCartData(cart?.products);
     }
   }, []);
   useEffect(() => {
-    if (cart.products) {
-      setCartData(cart.products);
+    if (cart?.products) {
+      setCartData(cart?.products);
     }
-  }, [cart.products]);
+  }, [cart?.products]);
 
   const handleFilter = (e) => {
     setInpValue(e.target.value);
