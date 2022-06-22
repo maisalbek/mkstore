@@ -63,6 +63,7 @@ const MyDialog = ({ open, setOpen }) => {
         flexDirection: "row",
         justifyContent: "center",
         textAlign: "center",
+        padding: "0",
       }}
       inputProps={{ MenuProps: { disableScrollLock: true } }}
     >

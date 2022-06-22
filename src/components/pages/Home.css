@@ -750,7 +750,7 @@ html {
   flex-direction: column;
   align-items: center;
   margin: 0 20px;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 @media all and (max-width: 408px) {
   .float-menu-container {
