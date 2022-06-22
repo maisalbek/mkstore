@@ -745,6 +745,12 @@ html {
   align-items: center;
   margin: 25px 35px;
 }
+.float-menu-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
 @media all and (max-width: 408px) {
   .float-menu-container {
     margin: 15px;

@@ -12,7 +12,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const useStyles = makeStyles(() => ({
-  paper: { width: "390px" },
+  paper: { width: "350px", height: "290px" },
 }));
 
 const MyDialog = ({ open, setOpen }) => {
@@ -60,8 +60,8 @@ const MyDialog = ({ open, setOpen }) => {
       aria-describedby="alert-dialog-slide-description"
     >
       {secondPart ? (
-        <div className="float-menu-container">
-          <img id="sendImage" width="70px" src={send} alt="" />
+        <div className="float-menu-container float-menu-container2">
+          <img id="sendImage" width="50px" src={send} alt="" />
           <span className="float-send-headerText">Спасибо!</span>
           <span className="float-send-text">
             Ваша заявка была принята ожидайте, скоро Вам перезвонят
