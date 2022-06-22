@@ -13,15 +13,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const useStyles = makeStyles(() => ({
   paper: {
-    width: window.innerWidth > 899 ? "350px" : "280px",
+    width: "350px",
     height: "290px",
   },
-  dialogPaper: { width: "295px" },
+  dialogPaper: { width: "295px", minHeight: "270px", maxHeight: "270px" },
 }));
 
 const MyDialog = ({ open, setOpen }) => {
   const [inpValues, setInpValues] = useState({ title: "", phone: "" });
   const [secondPart, setSecondPart] = useState(false);
+  const [secondPart2, setSecondPart2] = useState(false);
   const classes = useStyles();
   const [error, setError] = useState(true);
 
@@ -48,6 +49,7 @@ const MyDialog = ({ open, setOpen }) => {
 
   const handleSubmit = () => {
     setSecondPart(true);
+    setSecondPart2(true);
     setInpValues({ title: "", phone: "" });
   };
 
@@ -55,117 +57,224 @@ const MyDialog = ({ open, setOpen }) => {
     setOpen(false);
   };
   return (
-    <Dialog
-      classes={
-        secondPart
-          ? {
-              paper: classes.paper,
-            }
-          : window.innerWidth > 899
-          ? null
-          : { paper: classes.dialogPaper }
-      }
-      open={open}
-      TransitionComponent={Transition}
-      keepMounted
-      onClose={handleCloseMyDialog}
-      aria-describedby="alert-dialog-slide-description"
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        textAlign: "center",
-        padding: "0",
-      }}
-    >
-      {secondPart ? (
-        <div className="float-menu-container float-menu-container2">
-          <img id="sendImage" width="50px" src={send} alt="" />
-          <span className="float-send-headerText">Спасибо!</span>
-          <span className="float-send-text">
-            Ваша заявка была принята ожидайте, скоро Вам перезвонят
-          </span>
-          <button
-            className="zakazat-btn"
-            style={{
-              backgroundColor: "#1D1D1B",
-              marginTop: "16px",
-              cursor: "pointer",
-            }}
-            onClick={() => {
-              handleCloseMyDialog();
-              setSecondPart(false);
-            }}
-          >
-            Продолжить покупки
-          </button>
-        </div>
-      ) : (
-        <div className="float-menu-container">
-          <img
-            style={{ width: "14px", height: "14px" }}
-            className="closeMyDialog"
-            src={CloseIcon}
-            onClick={handleCloseMyDialog}
-            alt=""
-          />
-          <span className="float-menu-headerText">
-            Если у Вас остались вопросы
-          </span>
-          <span className="float-menu-text">
-            Оставьте заявку и мы обязательно Вам перезвоним
-          </span>
-          <form className="formdialog">
-            <img
-              style={{ margin: "0 15px", width: "20px" }}
-              src={AccountIcon}
-              alt=""
-            />
-            <input
-              className="float-input1"
-              type="search"
-              name="title"
-              placeholder="Как вам обращаться?"
-              value={inpValues.title}
-              onChange={(e) => handleChange(e)}
-            />
-          </form>
-          <form className="formdialog">
-            <img
-              style={{ margin: "0 15px", width: "20px" }}
-              src={TelephoneIcon}
-              alt=""
-            />
-            <input
-              className="float-input1"
-              type="number"
-              name="phone"
-              placeholder="Номер телефона"
-              value={inpValues.phone}
-              onChange={(e) => handleChange(e)}
-            />
-          </form>
-          {error ? (
+    <div>
+      <Dialog
+        classes={secondPart ? { paper: classes.paper } : null}
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleCloseMyDialog}
+        aria-describedby="alert-dialog-slide-description"
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "0",
+        }}
+        id="desktop-dialog"
+      >
+        {secondPart ? (
+          <div className="float-menu-container float-menu-container2">
+            <img id="sendImage" width="50px" src={send} alt="" />
+            <span className="float-send-headerText">Спасибо!</span>
+            <span className="float-send-text">
+              Ваша заявка была принята ожидайте, скоро Вам перезвонят
+            </span>
             <button
               className="zakazat-btn"
-              style={{ backgroundColor: "#1D1D1B", cursor: "pointer" }}
+              style={{
+                backgroundColor: "#1D1D1B",
+                marginTop: "16px",
+                cursor: "pointer",
+              }}
               onClick={() => {
-                handleSubmit();
+                handleCloseMyDialog();
+                setSecondPart(false);
               }}
             >
-              Заказать звонок
+              Продолжить покупки
             </button>
-          ) : (
+          </div>
+        ) : (
+          <div className="float-menu-container">
+            <img
+              style={{ width: "14px", height: "14px" }}
+              className="closeMyDialog"
+              src={CloseIcon}
+              onClick={handleCloseMyDialog}
+              alt=""
+            />
+            <span className="float-menu-headerText">
+              Если у Вас остались вопросы
+            </span>
+            <span className="float-menu-text">
+              Оставьте заявку и мы обязательно Вам перезвоним
+            </span>
+            <form className="formdialog">
+              <img
+                style={{ margin: "0 15px", width: "20px" }}
+                src={AccountIcon}
+                alt=""
+              />
+              <input
+                className="float-input1"
+                type="search"
+                name="title"
+                placeholder="Как вам обращаться?"
+                value={inpValues.title}
+                onChange={(e) => handleChange(e)}
+              />
+            </form>
+            <form className="formdialog">
+              <img
+                style={{ margin: "0 15px", width: "20px" }}
+                src={TelephoneIcon}
+                alt=""
+              />
+              <input
+                className="float-input1"
+                type="number"
+                name="phone"
+                placeholder="Номер телефона"
+                value={inpValues.phone}
+                onChange={(e) => handleChange(e)}
+              />
+            </form>
+            {error ? (
+              <button
+                className="zakazat-btn"
+                style={{ backgroundColor: "#1D1D1B", cursor: "pointer" }}
+                onClick={() => {
+                  handleSubmit();
+                }}
+              >
+                Заказать звонок
+              </button>
+            ) : (
+              <button
+                className="zakazat-btn"
+                style={{ backgroundColor: "rgb(121, 118, 118)" }}
+              >
+                Заказать звонок
+              </button>
+            )}
+          </div>
+        )}
+      </Dialog>
+
+      <Dialog
+        classes={{ paper: classes.dialogPaper }}
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleCloseMyDialog}
+        aria-describedby="alert-dialog-slide-description"
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "0",
+        }}
+        id="mobile-dialog"
+      >
+        {secondPart ? (
+          <div className="float-menu-container float-menu-container2">
+            <img
+              className="secondpart"
+              id="sendImage"
+              width="50px"
+              src={send}
+              alt=""
+            />
+            <span className="float-send-headerText">Спасибо!</span>
+            <span className="float-send-text">
+              Ваша заявка была принята ожидайте, скоро Вам перезвонят
+            </span>
             <button
               className="zakazat-btn"
-              style={{ backgroundColor: "rgb(121, 118, 118)" }}
+              style={{
+                backgroundColor: "#1D1D1B",
+                marginTop: "16px",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                handleCloseMyDialog();
+                setSecondPart(false);
+              }}
             >
-              Заказать звонок
+              Продолжить покупки
             </button>
-          )}
-        </div>
-      )}
-    </Dialog>
+          </div>
+        ) : (
+          <div className="float-menu-container">
+            <img
+              style={{ width: "14px", height: "14px" }}
+              className="closeMyDialog"
+              src={CloseIcon}
+              onClick={handleCloseMyDialog}
+              alt=""
+            />
+            <span className="float-menu-headerText">
+              Если у Вас остались вопросы
+            </span>
+            <span className="float-menu-text">
+              Оставьте заявку и мы обязательно Вам перезвоним
+            </span>
+            <form className="formdialog">
+              <img
+                style={{ margin: "0 15px", width: "20px" }}
+                src={AccountIcon}
+                alt=""
+              />
+              <input
+                className="float-input1"
+                type="search"
+                name="title"
+                placeholder="Как вам обращаться?"
+                value={inpValues.title}
+                onChange={(e) => handleChange(e)}
+              />
+            </form>
+            <form className="formdialog">
+              <img
+                style={{ margin: "0 15px", width: "20px" }}
+                src={TelephoneIcon}
+                alt=""
+              />
+              <input
+                id="float-input2"
+                className="float-input1"
+                type="number"
+                name="phone"
+                placeholder="Номер телефона"
+                value={inpValues.phone}
+                onChange={(e) => handleChange(e)}
+              />
+            </form>
+            {error ? (
+              <button
+                className="zakazat-btn"
+                style={{ backgroundColor: "#1D1D1B", cursor: "pointer" }}
+                onClick={() => {
+                  handleSubmit();
+                }}
+              >
+                Заказать звонок
+              </button>
+            ) : (
+              <button
+                className="zakazat-btn"
+                style={{ backgroundColor: "rgb(121, 118, 118)" }}
+              >
+                Заказать звонок
+              </button>
+            )}
+          </div>
+        )}
+      </Dialog>
+    </div>
   );
 };
 
