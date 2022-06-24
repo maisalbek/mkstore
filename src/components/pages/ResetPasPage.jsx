@@ -1,6 +1,6 @@
-import { Button, Container, Link, InputLabel, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import React, { useState } from "react";
-import { notify } from "../Toastify/Toastify";
+import { notify } from "../toastify/Toastify";
 import { useAuth } from "../context/AuthContextProvider";
 import Avatar from "@mui/material/Avatar";
 import TextField from "@mui/material/TextField";

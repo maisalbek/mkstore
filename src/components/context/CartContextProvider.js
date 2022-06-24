@@ -12,7 +12,7 @@ import {
 } from "../constants/Constants";
 import { useAuth } from "./AuthContextProvider";
 import { useNavigate } from "react-router-dom";
-import { notify } from "../Toastify/Toastify";
+import { notify } from "../toastify/Toastify";
 
 const cartContext = createContext();
 

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContextProvider";
-import { notify } from "../Toastify/Toastify";
+import { notify } from "../toastify/Toastify";
 
 const favoriteContext = createContext();
 export const useFavorite = () => {

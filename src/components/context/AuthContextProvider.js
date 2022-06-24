@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../Firebase";
 import { ADMIN_EMAIL, API11 } from "../constants/Constants";
-import { notify } from "../Toastify/Toastify";
+import { notify } from "../toastify/Toastify";
 import { useNavigate } from "react-router-dom";
 const authContext = createContext();
 

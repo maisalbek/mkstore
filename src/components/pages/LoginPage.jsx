@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import AuthForm from "../Auth/AuthForm";
+import AuthForm from "../auth/AuthForm";
 import { useAuth } from "../context/AuthContextProvider";
 
 const LoginPage = () => {
