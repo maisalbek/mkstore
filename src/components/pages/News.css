@@ -10,7 +10,7 @@
   display: flex;
   padding: 15px;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start !important;
   margin-bottom: 12px;
   background-color: #ffffff;
 }
@@ -44,12 +44,22 @@
   font-weight: 300;
   color: #5b5b5b;
   padding-right: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 165%;
+  color: #5b5b5b;
 }
 .newsTextShown {
   text-align: start;
   font-weight: 300;
   color: #5b5b5b;
   padding-right: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 165%;
+  color: #5b5b5b;
 }
 .hide-btn {
   display: none !important;
@@ -80,7 +90,7 @@
     display: flex !important;
   }
   .newsImg {
-    width: 280px;
-    height: 276px;
+    width: 236px;
+    height: 226px;
   }
 }

@@ -45,6 +45,11 @@ const Footer = () => {
             <Link to="/help" style={{ textDecoration: "none" }}>
               <span className="footer-text-items">Помощь</span>
             </Link>
+            {window.innerWidth < 899 ? (
+              <Link to="/public" style={{ textDecoration: "none" }}>
+                <span className="footer-text-items">Публичная оферта</span>
+              </Link>
+            ) : null}
           </div>
           <div className="footer-block">
             <span className="footer-header-text">Контакты</span>

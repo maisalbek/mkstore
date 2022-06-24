@@ -55,6 +55,8 @@ const MyDialog = ({ open, setOpen }) => {
 
   const handleCloseMyDialog = () => {
     setOpen(false);
+    setInpValues({ title: "", phone: "" });
+    setError(false);
   };
   return (
     <div>
@@ -138,6 +140,7 @@ const MyDialog = ({ open, setOpen }) => {
                 name="phone"
                 placeholder="Номер телефона"
                 value={inpValues.phone}
+                onKeyDown={(evt) => evt.key === "e" && evt.preventDefault()}
                 onChange={(e) => handleChange(e)}
               />
             </form>
@@ -224,7 +227,7 @@ const MyDialog = ({ open, setOpen }) => {
             </span>
             <form className="formdialog">
               <img
-                style={{ margin: "0 15px", width: "20px" }}
+                style={{ margin: "0 12px", width: "20px" }}
                 src={AccountIcon}
                 alt=""
               />
@@ -239,7 +242,7 @@ const MyDialog = ({ open, setOpen }) => {
             </form>
             <form className="formdialog">
               <img
-                style={{ margin: "0 15px", width: "20px" }}
+                style={{ margin: "0 12px", width: "20px" }}
                 src={TelephoneIcon}
                 alt=""
               />

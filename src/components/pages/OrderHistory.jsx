@@ -71,7 +71,7 @@ const OrderHistory = () => {
             <HistoryCard key={index} item={item} />
           ))
         ) : (
-          <span className="historyTxt">Ваша история заказов пусто</span>
+          <span className="historyTxt">Ваша история заказов пуста</span>
         )}
       </div>
     </div>

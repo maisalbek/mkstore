@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
 }
+
 @media all and (max-width: 340px) {
   /* .imageon320 {
     width: 295px !important;
@@ -96,4 +97,37 @@ input {
 }
 .MuiFormControlLabel-label {
   font-family: "Montserrat" !important;
+}
+#novinkicard {
+  background-color: #f2f2f2 !important;
+  padding-bottom: 8px !important;
+}
+#tablenovinkicard {
+  background-color: #f2f2f2 !important;
+  padding-bottom: 8px !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px white inset !important;
+}
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+.MuiTableRow-root {
+  background-color: #f2f2f2;
+}
+.css-4xg7ld-MuiPaper-root-MuiCard-root {
+  background-color: none !important;
+}
+.css-1ygcj2i-MuiTableCell-root {
+  border-bottom: none !important;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  height: "80px" !important;
+}
+.css-4xg7ld-MuiPaper-root-MuiCard-root {
+  background-color: #f2f2f2 !important;
 }

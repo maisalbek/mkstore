@@ -693,11 +693,7 @@ html {
   height: 240px;
   padding: 36px 0 24px 0;
 }
-.blocks:hover {
-  transform: scale(1.1);
-  transition: 0.4s;
-  border: 1px solid #e0e0e0;
-}
+
 .adventage-image {
   margin-bottom: 40px;
 }
@@ -719,7 +715,7 @@ html {
   align-items: center;
   padding: 14px 20px 13px;
   gap: 10px;
-  width: 100%;
+  width: 102%;
   height: 44px;
   border: none;
   color: #ffffff;
@@ -750,7 +746,7 @@ html {
   flex-direction: column;
   align-items: center;
   margin: 0 20px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 @media all and (max-width: 408px) {
   .float-menu-container {
@@ -780,6 +776,7 @@ html {
   font-size: 20px;
   line-height: 25px;
   width: 100%;
+  text-align: left;
 }
 .float-menu-text {
   color: #393939;
@@ -787,6 +784,7 @@ html {
   line-height: 150%;
   width: 100%;
   margin-top: 6px;
+  text-align: left;
 }
 @media all and (max-width: 408px) {
   .float-menu-headerText {

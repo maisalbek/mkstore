@@ -1,7 +1,6 @@
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -9,8 +8,9 @@ import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { Link as AuthLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 
 function Copyright(props) {
   return (
@@ -30,6 +30,15 @@ function Copyright(props) {
   );
 }
 
+const useStyles = makeStyles(() => ({
+  input1: {
+    height: "40px",
+  },
+  input2: {
+    height: "20px",
+  },
+}));
+
 const theme = createTheme();
 
 export default function AuthForm({
@@ -44,6 +53,8 @@ export default function AuthForm({
     const data = new FormData(event.currentTarget);
     handleSave(data.get("email"), data.get("password"));
   };
+
+  const classes = useStyles();
 
   return (
     <div
@@ -90,7 +101,7 @@ export default function AuthForm({
               label="Эл-почта"
               name="email"
               autoComplete="email"
-              autoFocus
+              InputProps={{ classes: { input: classes.input1 } }}
             />
             <TextField
               margin="normal"
@@ -101,6 +112,7 @@ export default function AuthForm({
               type="password"
               id="password"
               autoComplete="current-password"
+              InputProps={{ classes: { input: classes.input2 } }}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -129,7 +141,7 @@ export default function AuthForm({
               }}
               className="forgotPassword"
             >
-              <AuthLink to="/news" style={{ marginBottom: "15px" }}>
+              <AuthLink to="/resetpas" style={{ marginBottom: "15px" }}>
                 <span variant="body2" style={{ color: "#6338d9" }}>
                   Забыли пароль?
                 </span>

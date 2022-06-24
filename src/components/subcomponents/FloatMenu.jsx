@@ -49,7 +49,7 @@ const FloatMenu = () => {
           justifyContent: "center",
           alignItems: "center",
           position: "fixed",
-          left: checkPage ? "91%" : "94%",
+          left: checkPage ? "94%" : "94%",
           top: "80%",
           zIndex: 100,
         }}

@@ -119,15 +119,43 @@ a:-webkit-any-link {
   }
 }
 input[type="search"]::placeholder {
-  color: #bbb;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #bebebe;
 }
 input[type="number"]::placeholder {
-  color: #bbb;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #bebebe;
+}
+@media all and (max-width: 899px) {
+  input[type="search"]::placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #bebebe;
+  }
+  input[type="number"]::placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #bebebe;
+  }
 }
 .floatmenuSizeChange {
   position: fixed;
-  top: 84%;
-  left: 77%;
+  top: 84.5%;
+  left: 82%;
   z-index: 3;
 }
 @media all and (max-width: 1350px) {

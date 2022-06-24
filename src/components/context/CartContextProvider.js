@@ -12,6 +12,7 @@ import {
 } from "../constants/Constants";
 import { useAuth } from "./AuthContextProvider";
 import { useNavigate } from "react-router-dom";
+import { notify } from "../Toastify/Toastify";
 
 const cartContext = createContext();
 
@@ -101,6 +102,7 @@ const CartContextProvider = ({ children }) => {
         payload: cart,
       });
     } else {
+      notify("warning", "Войдите чтобы добавить!");
       navigate("/login");
     }
   };
@@ -125,6 +127,7 @@ const CartContextProvider = ({ children }) => {
         getCart();
       }
     } else {
+      notify("warning", "Войдите чтобы добавить!");
       navigate("/login");
     }
   };
@@ -167,6 +170,7 @@ const CartContextProvider = ({ children }) => {
       getCart();
       getCartLength();
     } else {
+      notify("warning", "Войдите чтобы удалить!");
       navigate("/login");
     }
   };
@@ -188,8 +192,6 @@ const CartContextProvider = ({ children }) => {
       } catch (err) {
         console.log(err);
       }
-    } else {
-      navigate("/login");
     }
   };
 
@@ -204,8 +206,6 @@ const CartContextProvider = ({ children }) => {
       } catch (err) {
         console.log(err);
       }
-    } else {
-      navigate("/login");
     }
   };
   const clearHistory = async (str) => {
@@ -221,8 +221,6 @@ const CartContextProvider = ({ children }) => {
       } catch (err) {
         console.log(err);
       }
-    } else {
-      navigate("/login");
     }
   };
 

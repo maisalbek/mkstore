@@ -23,7 +23,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const useStyles = makeStyles(() => ({
-  paper: { width: "440px", height: "670px" },
+  paper: { width: "440px", height: "660px" },
 }));
 
 const OrderDialog = ({ open, handleClose, cart }) => {

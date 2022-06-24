@@ -194,19 +194,25 @@ const AuthContextProvider = ({ children }) => {
   }, []);
 
   const resetPass = async (email) => {
-    try {
-      let { user } = await sendPasswordResetEmail(auth, email);
-    } catch (error) {
-      console.log(error.code);
-      console.log(error.message);
-    }
+    sendPasswordResetEmail(auth, email)
+      .then((a) => {
+        notify("success", "Подтверждение отправлено на почту");
+      })
+      .catch((error) => {
+        switch (error.code) {
+          case "auth/user-not-found":
+            notify("error", "Пользователь не найден!");
+          default:
+            notify("error", "Произошла ошибка");
+        }
+      });
   };
 
   return (
     <authContext.Provider
       value={{
-        registerUser,
         currentUser,
+        registerUser,
         logOutUser,
         loginUser,
         resetPass,

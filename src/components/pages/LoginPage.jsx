@@ -10,14 +10,22 @@ const LoginPage = () => {
   }, []);
 
   return (
-    <div style={{ minHeight: "600px" }}>
-      <AuthForm
-        title={"Войдите чтобы делать покупки"}
-        btnText={"Логин"}
-        link={"/register"}
-        linkText={"Нету ещё аккаунта? Зарегистрируйтесь!"}
-        handleSave={loginUser}
-      />
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div style={{ minHeight: "600px", maxWidth: "700px", margin: "5px 0" }}>
+        <AuthForm
+          title={"Логин"}
+          btnText={"Логин"}
+          link={"/register"}
+          linkText={"Нету ещё аккаунта? Зарегистрируйтесь!"}
+          handleSave={loginUser}
+        />
+      </div>
     </div>
   );
 };

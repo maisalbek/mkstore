@@ -146,6 +146,8 @@ const AllCollection = () => {
         <Pagination
           id="pag"
           count={pageTotalCount}
+          defaultPage={6}
+          siblingCount={0}
           classes={{ ul: classes.ul }}
           color="secondary"
           sx={{ display: "inline-block", margin: " 15px 99px 40px 0" }}

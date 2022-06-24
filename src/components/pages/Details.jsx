@@ -167,7 +167,6 @@ const Details = () => {
                     onClick={() => {
                       handleItemClick(index, item1);
                     }}
-                    // id="colordot"
                     id={item1 !== prodData.color ? null : "colordot"}
                   ></div>
                 ))

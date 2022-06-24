@@ -167,13 +167,22 @@
   font-weight: 500;
   font-size: 14px;
   color: black !important;
+  font-family: "Montserrat";
+  font-style: normal;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #393939;
+  align-self: stretch;
+  text-align: left;
 }
 .collectionfont {
   font-weight: 500;
   font-size: 14px;
+  text-align: left;
 }
 .collectionfont-size {
   font-weight: 400;
   font-size: 13px;
   color: #7c7c7c;
+  text-align: left;
 }

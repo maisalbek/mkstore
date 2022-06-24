@@ -31,6 +31,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useAuth } from "../context/AuthContextProvider";
 import AccountMenu from "../subcomponents/AccountMenu";
 import MyDialog from "../subcomponents/MyDialog";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Navbar() {
   const [headerInfo, setHeaderInfo] = useState({});
@@ -47,11 +49,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [favData, setFavData] = useState([]);
   const [cartData, setCartData] = useState([]);
-
   const navigate = useNavigate();
-
   const [state, setState] = useState(false);
-
   const location = useLocation();
 
   useEffect(() => {
@@ -159,6 +158,7 @@ export default function Navbar() {
       }}
     >
       <AppBar position="static" className="navbar-container">
+        <ToastContainer />
         <Toolbar className="mobilenavbar">
           <Box sx={{ width: { xs: "0", md: "75px" } }} />
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -273,7 +273,7 @@ export default function Navbar() {
               handleClickOpenMyDialog={handleClickOpenMyDialog}
             />
             <MyDialog open={open} setOpen={setOpen} />
-            <Link to="/" style={{ marginRight: "30px" }}>
+            <Link to="/" style={{ marginRight: "47px" }}>
               <img
                 src={Logo}
                 alt=""

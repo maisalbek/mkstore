@@ -52,19 +52,7 @@ const About = () => {
             </div>
           </div>
           <div className="about-right">
-            <span
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "flex-start",
-                marginBottom: "8px",
-                fontWeight: "500",
-                fontSize: "24px",
-                lineHeight: "30px",
-              }}
-            >
-              О нас
-            </span>
+            <span className="abouttitle">О нас</span>
             <span className="aboutText">
               {aboutData.text ? aboutData.text : <MySkeleton />}
             </span>

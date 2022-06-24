@@ -13,7 +13,7 @@ const CardTable = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const { addDelToFav, isProdInFav, getFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
-  const [isActive, setIsActive] = useState({});
+  const [isActive, setIsActive] = useState({ activeItem: 0 });
   const { currentUser } = useAuth();
   const handleItemClick = (index) => {
     setIsActive({ activeItem: index });
@@ -156,13 +156,7 @@ const CardTable = ({ item }) => {
                       }
                       onClick={() => {
                         handleItemClick(index);
-                        setCurrentPhoto((prev) => {
-                          if (prev === 4) {
-                            return prev - 1;
-                          } else {
-                            return prev + 1;
-                          }
-                        });
+                        setCurrentPhoto(index);
                       }}
                       id="colordots"
                     ></div>

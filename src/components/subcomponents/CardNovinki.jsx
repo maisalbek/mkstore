@@ -11,7 +11,7 @@ const CardNovinki = ({ item }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const { addDelToFav, isProdInFav, getFav } = useFavorite();
   const [inFav, setInFav] = React.useState(isProdInFav(item.id));
-  const [isActive, setIsActive] = useState({});
+  const [isActive, setIsActive] = useState({ activeItem: 0 });
   const [showLike, setShowLike] = useState(false);
   const { currentUser } = useAuth();
 
@@ -92,8 +92,10 @@ const CardNovinki = ({ item }) => {
           )}
           <div
             className="hover-image hover1"
-            onMouseEnter={() => setCurrentPhoto(0)}
-            onMouseLeave={() => setCurrentPhoto(0)}
+            onMouseEnter={() => {
+              setCurrentPhoto(0);
+              setIsActive({ activeItem: 0 });
+            }}
             onClick={() => {
               navigate(`/detail/${item.id}`);
             }}
@@ -102,8 +104,10 @@ const CardNovinki = ({ item }) => {
           </div>
           <div
             className="hover-image hover2"
-            onMouseEnter={() => setCurrentPhoto(1)}
-            onMouseLeave={() => setCurrentPhoto(0)}
+            onMouseEnter={() => {
+              setCurrentPhoto(1);
+              setIsActive({ activeItem: 1 });
+            }}
             onClick={() => {
               navigate(`/detail/${item.id}`);
             }}
@@ -112,8 +116,10 @@ const CardNovinki = ({ item }) => {
           </div>
           <div
             className="hover-image hover3"
-            onMouseEnter={() => setCurrentPhoto(2)}
-            onMouseLeave={() => setCurrentPhoto(0)}
+            onMouseEnter={() => {
+              setCurrentPhoto(2);
+              setIsActive({ activeItem: 2 });
+            }}
             onClick={() => {
               navigate(`/detail/${item.id}`);
             }}
@@ -122,8 +128,10 @@ const CardNovinki = ({ item }) => {
           </div>
           <div
             className="hover-image hover4"
-            onMouseEnter={() => setCurrentPhoto(3)}
-            onMouseLeave={() => setCurrentPhoto(0)}
+            onMouseEnter={() => {
+              setCurrentPhoto(3);
+              setIsActive({ activeItem: 3 });
+            }}
             onClick={() => {
               navigate(`/detail/${item.id}`);
             }}
@@ -144,14 +152,14 @@ const CardNovinki = ({ item }) => {
             </div>
           ) : null}
         </div>
-        <CardContent>
+        <CardContent sx={{ backgroundColor: "#f2f2f2" }} id="novinkicard">
           <div
             style={{
               width: "100%",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
-              backgroundColor: "#ffffff",
+              backgroundColor: "#f2f2f2",
             }}
           >
             <span className="collectionfont">
@@ -189,13 +197,7 @@ const CardNovinki = ({ item }) => {
                       }
                       onClick={() => {
                         handleItemClick(index);
-                        setCurrentPhoto((prev) => {
-                          if (prev === 4) {
-                            return prev - 1;
-                          } else {
-                            return prev + 1;
-                          }
-                        });
+                        setCurrentPhoto(index);
                       }}
                       id="colordots"
                     ></div>

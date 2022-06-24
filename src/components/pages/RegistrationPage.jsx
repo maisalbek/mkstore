@@ -10,14 +10,22 @@ const RegistrationPage = () => {
   }, []);
 
   return (
-    <div style={{ minHeight: "550px" }}>
-      <AuthForm
-        title={"Регистрация"}
-        btnText={"Регистрироваться"}
-        link={"/login"}
-        linkText={"Уже есть аккаунт? Логин!"}
-        handleSave={registerUser}
-      />
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div style={{ height: "550px", maxWidth: "700px", margin: "5px 0" }}>
+        <AuthForm
+          title={"Регистрация"}
+          btnText={"Регистрироваться"}
+          link={"/login"}
+          linkText={"Уже есть аккаунт? Логин!"}
+          handleSave={registerUser}
+        />
+      </div>
     </div>
   );
 };

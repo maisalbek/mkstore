@@ -21,8 +21,10 @@ import axios from "axios";
 import Slider from "../subcomponents/Slider";
 import MySkeleton from "../subcomponents/MySkeleton";
 import HomeBlocks from "../subcomponents/HomeBlocks";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContextProvider";
+
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [sliderData, setSliderData] = useState({});

@@ -69,7 +69,6 @@ const Favorite = () => {
         390
       ) {
         setCurrentPage((prev) => prev + 1);
-        console.log("first");
       }
     } else {
       if (
@@ -78,7 +77,6 @@ const Favorite = () => {
         0.5
       ) {
         setCurrentPage((prev) => prev + 1);
-        console.log("first");
       }
     }
   };

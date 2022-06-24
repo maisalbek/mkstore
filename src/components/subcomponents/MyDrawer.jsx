@@ -31,7 +31,7 @@ const MyDrawer = ({
   return (
     <Drawer
       PaperProps={{
-        sx: { width: "250px", height: "540px" },
+        sx: { width: "250px", height: "640px" },
       }}
       anchor={"left"}
       open={state["left"]}

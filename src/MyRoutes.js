@@ -16,6 +16,7 @@ import OrderHistory from "./components/pages/OrderHistory";
 import Public from "./components/pages/Public";
 import RegistrationPage from "./components/pages/RegistrationPage";
 import SearchPage from "./components/pages/SearchPage";
+import ResetPasPage from "./components/pages/ResetPasPage.jsx";
 
 const MyRoutes = () => {
   return (
@@ -35,6 +36,7 @@ const MyRoutes = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/orderhistory" element={<OrderHistory />} />
+        <Route path="/resetpas" element={<ResetPasPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>

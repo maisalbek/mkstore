@@ -16,6 +16,14 @@
   width: 100%;
   height: 105px;
 }
+@media all and (max-width: 899px) {
+  .footer-image-container {
+    align-items: flex-start;
+  }
+  .footer-logo {
+    margin-left: 17px;
+  }
+}
 .footer-subcontainer {
   width: 70%;
   display: flex;

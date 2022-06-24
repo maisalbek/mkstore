@@ -1,8 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
-import { API11 } from "../constants/Constants";
 import { useAuth } from "./AuthContextProvider";
-import axios from "axios";
+import { notify } from "../Toastify/Toastify";
 
 const favoriteContext = createContext();
 export const useFavorite = () => {
@@ -64,6 +63,7 @@ const FavoriteContextProvider = ({ children }) => {
         payload: fav,
       });
     } else {
+      notify("warning", "Войдите чтобы добавить!");
       navigate("/login");
     }
   };
@@ -93,6 +93,7 @@ const FavoriteContextProvider = ({ children }) => {
       localStorage.setItem("fav", JSON.stringify(fav));
       getFav();
     } else {
+      notify("warning", "Войдите чтобы удалить!");
       navigate("/login");
     }
   };
