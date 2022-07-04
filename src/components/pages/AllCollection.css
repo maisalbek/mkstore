@@ -1,0 +1,188 @@
+.collectionOuter {
+  display: flex;
+  background-color: #ffffff;
+  padding: 0 99px;
+  justify-content: space-between;
+}
+.allcollection-container {
+  padding: 0 99px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  place-items: center;
+}
+.allcollectionnovinki {
+  padding: 0 99px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  place-items: center;
+}
+.allcollectionheader {
+  display: flex;
+  padding: 32px 99px 18px 99px;
+}
+.allcollectionheadertext {
+  color: #393939;
+  font-size: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: start;
+}
+@media all and (max-width: 500px) {
+  .allcollectionheadertext {
+    font-size: 16px !important;
+  }
+}
+.breadcrumbs {
+  font-weight: 500;
+  color: #393939;
+}
+.third {
+  font-weight: 500;
+  color: #979797;
+}
+.headerNovinki {
+  display: flex;
+  padding: 32px 99px 18px 99px;
+}
+@media all and (max-width: 1455px) {
+  .allcollection-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .allcollectionnovinki {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 1191px) {
+  .allcollection-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .allcollectionnovinki {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media all and (max-width: 976px) {
+  .allcollectionnovinki {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (min-width: 899px) {
+  .table-allcolcontainer {
+    display: none;
+  }
+}
+@media all and (max-width: 899px) {
+  .allcollectionnovinki {
+    display: none;
+  }
+  .allcollection-container {
+    padding: 0 25px;
+  }
+  .allcollectionheader {
+    padding: 32px 25px 18px 25px;
+  }
+  .collectionOuter {
+    padding: 0 25px;
+  }
+  .headerNovinki {
+    padding: 32px 25px 18px 25px;
+  }
+  .css-46bh2p-MuiCardContent-root {
+    padding-top: 0 !important;
+  }
+}
+@media all and (max-width: 709px) {
+  .allcollection-container {
+    grid-template-columns: 1fr;
+  }
+  .allcollectionheadertext {
+    font-size: 18px;
+  }
+  .allcollectionheader {
+    padding: 20px 25px 18px 25px !important;
+  }
+  .breadcrumbs {
+    font-size: 12px;
+  }
+  .third {
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 564px) {
+  .allcollectionnovinki {
+    grid-template-columns: 1fr;
+  }
+  #pag {
+    margin: 15px 40px 20px 0 !important;
+  }
+  .css-19micn4-MuiButtonBase-root-MuiPaginationItem-root {
+    margin: 0 !important;
+  }
+}
+@media all and (max-width: 370px) {
+  .allcollection-container {
+    padding: 0px;
+  }
+  .allcollectionheader {
+    padding: 32px 12px 18px 12px;
+  }
+  .collectionOuter {
+    padding: 0 25px;
+  }
+  #id {
+    margin: 0 !important;
+  }
+}
+.collectioncard-image-container {
+  width: 250px;
+  height: 332px;
+  position: relative;
+}
+.collectionlikeIcon {
+  position: absolute;
+  top: 2%;
+  left: 86%;
+  color: white;
+  cursor: pointer;
+  z-index: 9 !important;
+}
+.collectionarrow-right {
+  position: absolute;
+  top: -4%;
+  left: -15%;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid red;
+  transform: rotate(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.collectionfont-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: black !important;
+  font-family: "Montserrat";
+  font-style: normal;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  color: #393939;
+  align-self: stretch;
+  text-align: left;
+}
+.collectionfont {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+}
+.collectionfont-size {
+  font-weight: 400;
+  font-size: 13px;
+  color: #7c7c7c;
+  text-align: left;
+}
