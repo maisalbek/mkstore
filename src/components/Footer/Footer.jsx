@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import FooterLogo from "../images/FooterLogo.svg";
+// import FooterLogo from "../images/FooterLogo.svg";
+import Logo from "../images/Lacoste_logo.svg.png";
 import telephone from "../images/footertel.svg";
 import footermail from "../images/footer-mail.svg";
 import footerinstagram from "../images/footerInsta.svg";
@@ -24,13 +25,14 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-image-container">
           <Link to="/">
-            <img className="footer-logo" src={FooterLogo} alt="" />
+            {/* <img className="footer-logo" src={FooterLogo} alt="" /> */}
+            <img className="footer-logo" src={Logo} alt="" />
           </Link>
           <span
             className="developed"
             style={{ marginTop: "30px", color: "#B9B9B9" }}
           >
-            {contact.footerText}
+            Developed by MK 2022
           </span>
         </div>
         <div className="footer-subcontainer">

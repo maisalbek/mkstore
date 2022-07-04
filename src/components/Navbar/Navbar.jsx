@@ -1,16 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import {
-  NavLink,
-  Link,
-  useNavigate,
-  useSearchParams,
-  useLocation,
-} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Logo from "../images/Logo.svg";
+// import Logo from "../images/Logo.svg";
+import Logo from "../images/Lacoste_logo.svg.png";
 import SearchIcon from "../images/searchIcon.svg";
 import BurgerMenu from "../images/coolicon.svg";
 import FavoriteIcon from "../images/FavoriteIcon.svg";
@@ -147,7 +142,6 @@ export default function Navbar() {
   return (
     <Box
       sx={{
-        // position: "sticky",
         top: 0,
         right: 0,
         left: 0,
@@ -276,6 +270,7 @@ export default function Navbar() {
             <Link to="/" style={{ marginRight: "47px" }}>
               <img
                 src={Logo}
+                // src={Logo}
                 alt=""
                 style={{ width: "99px", height: "43px" }}
               />
@@ -479,8 +474,8 @@ export default function Navbar() {
             </span>
           </Link>
         </Toolbar>
-        {showFloat ? <FloatMenu /> : null}
       </AppBar>
+      {showFloat ? <FloatMenu /> : null}
     </Box>
   );
 }

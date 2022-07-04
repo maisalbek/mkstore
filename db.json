@@ -28,7 +28,13 @@
                 "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg",
                 "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg"
               ],
-              "colors": ["red", "orange", "blue", "black", "green"],
+              "colors": [
+                "red",
+                "orange",
+                "blue",
+                "black",
+                "green"
+              ],
               "color": "black",
               "title": "Вечернее платье",
               "price": 1365,
@@ -56,7 +62,13 @@
                 "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg",
                 "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg"
               ],
-              "colors": ["red", "orange", "blue", "black", "green"],
+              "colors": [
+                "red",
+                "orange",
+                "blue",
+                "black",
+                "green"
+              ],
               "color": "black",
               "title": "Вечернее платье",
               "price": 1365,
@@ -79,7 +91,9 @@
         "totalCount": 1,
         "totalOldPrice": 2730,
         "totalCurrentPrice": 1365,
-        "totalcolors": ["black"]
+        "totalcolors": [
+          "black"
+        ]
       },
       "orderHistory": [],
       "id": 3
@@ -98,7 +112,13 @@
                 "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
                 "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg"
               ],
-              "colors": ["red", "orange", "blue", "black", "green"],
+              "colors": [
+                "red",
+                "orange",
+                "blue",
+                "black",
+                "green"
+              ],
               "color": "blue",
               "title": "Повседневное платье",
               "price": 1365,
@@ -126,67 +146,16 @@
     {
       "user": "test4@gmail.com",
       "fav": {
-        "products": [
-          {
-            "item": {
-              "id": 3,
-              "image": [
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg"
-              ],
-              "colors": ["red", "orange", "blue", "black", "green"],
-              "color": "blue",
-              "title": "Платье из кожи",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "Волокна",
-              "collection": "Зима",
-              "type": "novinka"
-            }
-          }
-        ]
+        "products": []
       },
       "cart": {
-        "products": [
-          {
-            "item": {
-              "id": 3,
-              "image": [
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
-                "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg"
-              ],
-              "colors": ["red", "orange", "blue", "black", "green"],
-              "color": "blue",
-              "title": "Платье из кожи",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 2730,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "Волокна",
-              "collection": "Зима",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 3,
-            "color": "blue",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 2730
-          }
-        ],
-        "totalCount": 1,
-        "totalOldPrice": 2730,
-        "totalCurrentPrice": 1365,
-        "totalcolors": ["blue"]
+        "products": [],
+        "totalCount": 0,
+        "totalOldPrice": 0,
+        "totalCurrentPrice": 0,
+        "totalcolors": [
+          "black"
+        ]
       },
       "orderHistory": [],
       "id": 5
@@ -205,7 +174,13 @@
                 "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
                 "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg"
               ],
-              "colors": ["red", "orange", "blue", "black", "green"],
+              "colors": [
+                "red",
+                "orange",
+                "blue",
+                "black",
+                "green"
+              ],
               "color": "orange",
               "title": "Платье из кожи",
               "price": 1365,
@@ -228,7 +203,13 @@
                 "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg",
                 "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg"
               ],
-              "colors": ["red", "orange", "blue", "black", "green"],
+              "colors": [
+                "red",
+                "orange",
+                "blue",
+                "black",
+                "green"
+              ],
               "color": "black",
               "title": "Вечернее платье",
               "price": 1365,
@@ -252,7 +233,13 @@
                 "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
                 "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
               ],
-              "colors": ["red", "orange", "blue", "black", "green"],
+              "colors": [
+                "red",
+                "orange",
+                "blue",
+                "black",
+                "green"
+              ],
               "color": "green",
               "title": "Nike",
               "price": 1365,
@@ -284,40 +271,13 @@
         "products": []
       },
       "cart": {
-        "products": [
-          {
-            "item": {
-              "id": 2,
-              "image": [
-                "https://images.wbstatic.net/big/new/10140000/10149773-1.jpg",
-                "https://malinka-fashion.ru/images/products/4b/96/product_add_pic_50595.jpg",
-                "https://cdn.dressa.ru/ostrov-cache/sylius_medium/8f/seryy-sarafan-iz-tvida-v-kletku-c-karmanami-41593-1.jpg",
-                "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
-                "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
-              ],
-              "colors": ["red", "orange", "blue", "black", "green"],
-              "color": "red",
-              "title": "Платье",
-              "price": 1365,
-              "article": "Платье PL984/dakota",
-              "oldprice": 0,
-              "description": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.  ",
-              "material": "Полиэстер ",
-              "textile": "Волокна",
-              "collection": "Осень",
-              "type": "novinka"
-            },
-            "count": 1,
-            "id": 2,
-            "color": "red",
-            "currentSubPrice": 1365,
-            "oldSubPrice": 1365
-          }
-        ],
-        "totalCount": 1,
-        "totalOldPrice": 1365,
-        "totalCurrentPrice": 1365,
-        "totalcolors": ["red"]
+        "products": [],
+        "totalCount": 0,
+        "totalOldPrice": 0,
+        "totalCurrentPrice": 0,
+        "totalcolors": [
+          "green"
+        ]
       },
       "orderHistory": [],
       "id": 7
@@ -355,7 +315,13 @@
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
         "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "orange",
       "title": "Платье из кожи",
       "price": 1365,
@@ -376,7 +342,13 @@
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "blue",
       "title": "Повседневное платье",
       "price": 1365,
@@ -397,7 +369,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "red",
       "title": "Платье",
       "price": 1365,
@@ -418,7 +396,13 @@
         "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg",
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "black",
       "title": "Вечернее платье",
       "price": 1365,
@@ -440,7 +424,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "green",
       "title": "Nike",
       "price": 1365,
@@ -462,7 +452,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "red",
       "title": "Adidas",
       "price": 1365,
@@ -483,7 +479,13 @@
         "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
         "https://images.wbstatic.net/c516x688/new/4380000/4389994-1.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "orange",
       "title": "Puma",
       "price": 1365,
@@ -504,7 +506,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "blue",
       "title": "New balance",
       "price": 1365,
@@ -525,7 +533,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "black",
       "title": "Zark",
       "price": 1365,
@@ -547,7 +561,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "green",
       "title": "Вечернее платье",
       "price": 1365,
@@ -568,7 +588,13 @@
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "red",
       "title": "Вечернее платье",
       "price": 1365,
@@ -590,7 +616,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "orange",
       "title": "Вечернее платье",
       "price": 1365,
@@ -611,7 +643,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "blue",
       "title": "Вечернее платье",
       "price": 1365,
@@ -633,7 +671,13 @@
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "black",
       "title": "Вечернее платье",
       "price": 1365,
@@ -654,7 +698,13 @@
         "https://images.wbstatic.net/big/new/12870000/12876578-1.jpg",
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "green",
       "title": "Вечернее платье",
       "price": 1365,
@@ -676,7 +726,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "red",
       "title": "Вечернее платье",
       "price": 1365,
@@ -698,7 +754,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "orange",
       "title": "Вечернее платье",
       "price": 1365,
@@ -719,7 +781,13 @@
         "https://lluk.ru/storage/products/175/10611/10611_737_1.jpg",
         "https://images.wbstatic.net/c516x688/new/4380000/4389994-1.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "blue",
       "title": "Вечернее платье",
       "price": 1365,
@@ -740,7 +808,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "black",
       "title": "Вечернее платье",
       "price": 1365,
@@ -761,7 +835,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "green",
       "title": "Вечернее платье",
       "price": 1365,
@@ -783,7 +863,13 @@
         "https://images.wbstatic.net/big/new/4380000/4389985-2.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "red",
       "title": "Вечернее платье",
       "price": 1365,
@@ -804,7 +890,13 @@
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg",
         "https://images.wbstatic.net/big/new/10940000/10941113-6.jpg"
       ],
-      "colors": ["red", "orange", "blue", "black", "green"],
+      "colors": [
+        "red",
+        "orange",
+        "blue",
+        "black",
+        "green"
+      ],
       "color": "green",
       "title": "Вечернее платье",
       "price": 1365,

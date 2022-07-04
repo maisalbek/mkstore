@@ -362,7 +362,7 @@ html {
   left: 88%;
   color: white;
   cursor: pointer;
-  z-index: 9;
+  z-index: 1;
 }
 .arrow-right {
   position: absolute;
@@ -715,7 +715,7 @@ html {
   align-items: center;
   padding: 14px 20px 13px;
   gap: 10px;
-  width: 102%;
+  width: 101.5%;
   height: 44px;
   border: none;
   color: #ffffff;
@@ -739,22 +739,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 25px 35px;
-}
-.float-menu-container2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 20px;
-  /* margin-left: 50px; */
-}
-@media all and (max-width: 408px) {
-  .float-menu-container {
-    margin: 15px;
-  }
-  .float-menu-container2 {
-    margin: 15px;
-  }
+  position: relative;
 }
 @media all and (max-width: 426px) {
   .novinki-text {
@@ -774,17 +759,23 @@ html {
 .float-menu-headerText {
   font-weight: 600;
   font-size: 20px;
-  line-height: 25px;
   width: 100%;
   text-align: left;
+  font-family: "Montserrat";
+  font-style: normal;
+  line-height: 125%;
+  color: #393939;
 }
 .float-menu-text {
-  color: #393939;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  width: 100%;
-  margin-top: 6px;
-  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  color: #393939;
+  text-align: start;
 }
 @media all and (max-width: 408px) {
   .float-menu-headerText {
@@ -803,30 +794,26 @@ html {
     height: 300px;
   }
 }
-#sendImage {
-  margin-top: 25px;
-}
 .float-send-headerText {
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 25px;
-  width: 100%;
-  text-align: center;
+  font-size: 22px;
+  line-height: 100%;
+  color: #393939;
   margin-top: 14px;
-  margin-bottom: 8px;
 }
 .float-send-text {
-  color: #393939;
-  font-size: 18px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
   line-height: 150%;
-  width: 100%;
-  margin-top: 6px;
   text-align: center;
+  color: #393939;
+  margin-top: 8px;
 }
 @media all and (max-width: 408px) {
-  #sendImage {
-    margin-top: 10px;
-  }
   .float-send-headerText {
     margin-top: 10px;
     font-size: 18px;
