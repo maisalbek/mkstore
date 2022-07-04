@@ -10,17 +10,17 @@
 // export const API10 = "http://localhost:8001/publicOffer"; //publicOffer
 // export const API11 = "http://localhost:8001/users"; //users
 
-export const API = "https://zeonstore.herokuapp.com/products";
-export const API1 = "https://zeonstore.herokuapp.com/footer"; //footer
-export const API2 = "https://zeonstore.herokuapp.com/header"; //header
-export const API3 = "https://zeonstore.herokuapp.com/slider"; //slider
-export const API4 = "https://zeonstore.herokuapp.com/advantages"; //advantages
-export const API5 = "https://zeonstore.herokuapp.com/collection"; //collection
-export const API6 = "https://zeonstore.herokuapp.com/about"; //about
-export const API7 = "https://zeonstore.herokuapp.com/news"; //news
-export const API8 = "https://zeonstore.herokuapp.com/help"; //help
-export const API10 = "https://zeonstore.herokuapp.com/publicOffer"; //publicOffer
-export const API11 = "https://zeonstore.herokuapp.com/users"; //users
+export const API = "https://mkdatabase.herokuapp.com/products";
+export const API1 = "https://mkdatabase.herokuapp.com/footer"; //footer
+export const API2 = "https://mkdatabase.herokuapp.com/header"; //header
+export const API3 = "https://mkdatabase.herokuapp.com/slider"; //slider
+export const API4 = "https://mkdatabase.herokuapp.com/advantages"; //advantages
+export const API5 = "https://mkdatabase.herokuapp.com/collection"; //collection
+export const API6 = "https://mkdatabase.herokuapp.com/about"; //about
+export const API7 = "https://mkdatabase.herokuapp.com/news"; //news
+export const API8 = "https://mkdatabase.herokuapp.com/help"; //help
+export const API10 = "https://mkdatabase.herokuapp.com/publicOffer"; //publicOffer
+export const API11 = "https://mkdatabase.herokuapp.com/users"; //users
 
 export const ADMIN_EMAIL = "admin-zeon@gmail.com";
 
